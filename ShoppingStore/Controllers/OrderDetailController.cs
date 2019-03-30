@@ -108,10 +108,10 @@ namespace ShoppingStore.Controllers
             if (result.IsSuccessStatusCode)
             {
                 string OrderId = result.Content.ReadAsStringAsync().Result;
-                logger.LogInformation("User:" + username + "plaeced order:" + JsonConvert.SerializeObject(OrderId));
+                logger.LogInformation("User:" + username + " plaeced order: " + OrderId);
                 return Index(OrderId);
             }
-            logger.LogInformation("User:" + username + "plaeced order:" + JsonConvert.SerializeObject(orderDetail) + " failed");
+            logger.LogInformation("User:" + username + "plaeced order: " + JsonConvert.SerializeObject(orderDetail) + " failed");
             return RedirectToRoute(new { controller = "Checkout", action = "Index" });
         }
     }

@@ -1,16 +1,21 @@
 ﻿<Properties StartupConfiguration="{D85E7246-65D7-41AA-BFEF-896B139C354F}|Default">
   <MonoDevelop.Ide.ItemProperties.ShoppingStore PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingStore/Controllers/OrderDetailController.cs">
+    <Files>
+      <File FileName="ShoppingStore/Controllers/ItemController.cs" Line="17" Column="1" />
+      <File FileName="ShoppingStore/Views/OrderList/Index.cshtml" Line="29" Column="92" />
+      <File FileName="ShoppingStore/Views/OrderDetail/Index.cshtml" Line="16" Column="33" />
+      <File FileName="ShoppingStore/Controllers/OrderDetailController.cs" Line="119" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ShoppingStore" expanded="True">
-            <Node name="ShoppingStore" expanded="True" selected="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="wwwroot" expanded="True">
-                <Node name="js" expanded="True" />
+            <Node name="ShoppingStore" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="OrderDetailController.cs" selected="True" />
               </Node>
+              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>

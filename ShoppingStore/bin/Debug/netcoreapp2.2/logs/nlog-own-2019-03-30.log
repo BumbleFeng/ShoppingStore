@@ -1,0 +1,50 @@
+2019-03-30 10:57:51.6560|DEBUG|ShoppingStore.Program|init main |url: |action: 
+2019-03-30 10:59:30.9023|INFO|ShoppingStore.Controllers.HomeController|User:abc login |url: https://localhost/login|action: Index
+2019-03-30 10:59:33.8789|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed cart |url: https://localhost/cart|action: Index
+2019-03-30 10:59:41.8839|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed item:1 Java Servlet Programming |url: https://localhost/item/1|action: Index
+2019-03-30 10:59:46.4942|INFO|ShoppingStore.Controllers.HomeController|User:abc add item:1 with number:2 to cart |url: https://localhost/item/AddCart|action: AddCart
+2019-03-30 10:59:50.9206|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed cart |url: https://localhost/cart|action: Index
+2019-03-30 10:59:53.2326|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order list |url: https://localhost/OrderList|action: Index
+2019-03-30 11:00:05.1992|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed cart |url: https://localhost/cart|action: Index
+2019-03-30 11:00:08.6479|INFO|ShoppingStore.Controllers.HomeController|User:abc checkout |url: https://localhost/Checkout|action: Index
+2019-03-30 11:01:13.6036|INFO|ShoppingStore.Controllers.HomeController|User:abcplaeced order:"2019033015011287793896345" |url: https://localhost/OrderDetail|action: Index
+2019-03-30 11:01:13.9117|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order:2019033015011287793896345 |url: https://localhost/OrderDetail|action: Index
+2019-03-30 11:01:27.8668|ERROR|ShoppingStore.Controllers.HomeController|User:abc checkout failed:BadRequest |url: https://localhost/Checkout|action: Index
+2019-03-30 11:01:27.9801|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed cart |url: https://localhost/Cart|action: Index
+2019-03-30 11:01:31.0027|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order list |url: https://localhost/OrderList|action: Index
+2019-03-30 11:01:44.4137|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed category:Laptop |url: https://localhost/category|action: Index
+2019-03-30 11:01:46.0660|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed category:Laptop |url: https://localhost/category|action: Index
+2019-03-30 11:01:47.3462|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed category:Book |url: https://localhost/category|action: Index
+2019-03-30 11:01:48.8130|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed category:CD |url: https://localhost/category|action: Index
+2019-03-30 11:02:13.7179|ERROR|ShoppingStore.Controllers.HomeController|Crash |url: https://localhost/error|action: Index
+2019-03-30 11:02:14.2834|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.Exception: Exception of type 'System.Exception' was thrown.
+   at ShoppingStore.Controllers.ErrorController.Index() in /Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/ShoppingStore/Controllers/ErrorController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/error|action: Index
+2019-03-30 11:02:18.1134|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed category:CD |url: https://localhost/category|action: Index
+2019-03-30 11:02:21.6065|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order list |url: https://localhost/OrderList|action: Index
+2019-03-30 11:02:23.6921|INFO|ShoppingStore.Controllers.HomeController|User:abc logout |url: https://localhost/login/logout|action: Logout
+2019-03-30 13:42:02.0718|DEBUG|ShoppingStore.Program|init main |url: |action: 
+2019-03-30 13:42:47.9410|INFO|ShoppingStore.Controllers.HomeController|User:abc login |url: https://localhost/login|action: Index
+2019-03-30 13:42:50.1702|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order list |url: https://localhost/OrderList|action: Index
+2019-03-30 13:50:22.6284|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order list |url: https://localhost/OrderList|action: Index
+2019-03-30 13:51:00.6416|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order list |url: https://localhost/OrderList|action: Index
+2019-03-30 13:51:08.4071|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order list |url: https://localhost/OrderList|action: Index
+2019-03-30 13:52:19.7216|INFO|ShoppingStore.Controllers.HomeController|User:abc viewed order list |url: https://localhost/OrderList|action: Index

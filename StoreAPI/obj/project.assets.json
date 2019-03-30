@@ -12441,11 +12441,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/BumbleBee/Documents/csye/Info6250/Assignment6/StoreAPI/StoreAPI.csproj",
+      "projectUniqueName": "/Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/StoreAPI/StoreAPI.csproj",
       "projectName": "StoreAPI",
-      "projectPath": "/Users/BumbleBee/Documents/csye/Info6250/Assignment6/StoreAPI/StoreAPI.csproj",
+      "projectPath": "/Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/StoreAPI/StoreAPI.csproj",
       "packagesPath": "/Users/BumbleBee/.nuget/packages/",
-      "outputPath": "/Users/BumbleBee/Documents/csye/Info6250/Assignment6/StoreAPI/obj/",
+      "outputPath": "/Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/StoreAPI/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
