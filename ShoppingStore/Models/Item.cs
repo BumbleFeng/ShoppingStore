@@ -12,9 +12,5 @@
         public string Image { get; set; }
         public string Seller { get; set; }
         public bool NewTag { get; set; }
-
-        public Item()
-        {
-        }
     }
 }

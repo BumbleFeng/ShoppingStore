@@ -38,11 +38,8 @@ namespace ShoppingStore.Controllers
                 logger.LogInformation("User:" + username + " checkout");
                 return View(user);
             }
-            else
-            {
-                logger.LogError("User:" + username + " checkout failed:" + result.StatusCode);
-                return RedirectToRoute(new { controller = "Cart", action = "Index" });
-            }
+            logger.LogError("User:" + username + " checkout failed:" + result.StatusCode);
+            return RedirectToRoute(new { controller = "Cart", action = "Index" });
         }
     }
 }

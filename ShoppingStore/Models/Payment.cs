@@ -23,11 +23,7 @@ namespace ShoppingStore.Models
         public int BillingAddressId { get; set; }
         public Address BillingAddress { get; set; }
 
-        public Payment()
-        {
-        }
-
-        public string Exp() 
+        public string Exp()
         {
             return DateTime.ParseExact(Expiration, "MMyy", CultureInfo.InvariantCulture).ToString("yyyy/MM");
         }

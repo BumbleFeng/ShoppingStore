@@ -22,20 +22,16 @@ namespace ShoppingStore.Models
 
         public Tracking Tracking { get; set; }
 
-        public OrderDetail()
-        {
-        }
-
         public string VerifyOrder()
         {
             if (ShippingAddressId == 0 && ShippingAddress == null)
                 return "No ShippingAddress Information";
-            else if (ShippingAddressId == 0 && ShippingAddress.VerifyAddress() != "valid")
+            if (ShippingAddressId == 0 && ShippingAddress.VerifyAddress() != "valid")
                 return ShippingAddress.VerifyAddress();
 
             if (PaymentId == 0 && Payment == null)
                 return "Need Payment Infomation";
-            else if (PaymentId == 0 && Payment.VerifyPayment() != "valid")
+            if (PaymentId == 0 && Payment.VerifyPayment() != "valid")
                 return Payment.VerifyPayment();
 
             return "valid";

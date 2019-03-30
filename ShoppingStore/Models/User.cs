@@ -20,9 +20,5 @@ namespace ShoppingStore.Models
         public IList<OrderDetail> OrderDetails { get; set; }
 
         public IList<Payment> Payments { get; set; }
-
-        public User()
-        {
-        }
     }
 }

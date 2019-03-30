@@ -42,11 +42,8 @@ namespace ShoppingStore.Controllers
                 logger.LogInformation("User:" + username + " viewed order:" + id);
                 return View(orderDetail);
             }
-            else
-            {
-                logger.LogError("Order:" + id +" not found for user:" + username);
-                return new NotFoundResult();
-            }
+            logger.LogError("Order:" + id + " not found for user:" + username);
+            return new NotFoundResult();
         }
 
         [HttpPost]
@@ -86,6 +83,7 @@ namespace ShoppingStore.Controllers
             string same = HttpContext.Request.Form["billingAsShipping"];
             if (same == null)
             {
+                same = "F";
                 Address billingAddress = new Address
                 {
                     FirstName = HttpContext.Request.Form["billingFirstname"],
@@ -110,14 +108,11 @@ namespace ShoppingStore.Controllers
             if (result.IsSuccessStatusCode)
             {
                 string OrderId = result.Content.ReadAsStringAsync().Result;
-                logger.LogInformation("User:"+username+ "plaeced order:" + JsonConvert.SerializeObject(OrderId));
+                logger.LogInformation("User:" + username + "plaeced order:" + JsonConvert.SerializeObject(OrderId));
                 return Index(OrderId);
             }
-            else
-            {
-                logger.LogInformation("User:" + username + "plaeced order:" + JsonConvert.SerializeObject(orderDetail) + " failed");
-                return RedirectToRoute(new { controller = "Checkout", action = "Index" });
-            }
+            logger.LogInformation("User:" + username + "plaeced order:" + JsonConvert.SerializeObject(orderDetail) + " failed");
+            return RedirectToRoute(new { controller = "Checkout", action = "Index" });
         }
     }
 }

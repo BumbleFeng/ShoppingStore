@@ -5,13 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ShoppingStore.ViewComponents
 {
-    public class UserViewComponent: ViewComponent
+    public class UserViewComponent : ViewComponent
     {
-
-        public UserViewComponent()
-        {
-        }
-
         public async Task<IViewComponentResult> InvokeAsync()
         {
             string username = await GetUsername();

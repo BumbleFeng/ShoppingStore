@@ -145,3 +145,7 @@ C:/Users/TM/Documents/6250 web/Lecture4/ShoppingStore/ShoppingStore/obj/Debug/ne
 /Users/BumbleBee/Downloads/Assignment6/ShoppingStore/obj/Debug/netcoreapp2.2/ShoppingStore.dll
 /Users/BumbleBee/Downloads/Assignment6/ShoppingStore/obj/Debug/netcoreapp2.2/ShoppingStore.pdb
 /Users/BumbleBee/Downloads/Assignment6/ShoppingStore/obj/Debug/netcoreapp2.2/ShoppingStore.csproj.CopyComplete
+/Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config
+/Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/ShoppingStore/obj/Debug/netcoreapp2.2/Razor/Views/Checkout/Index.g.cshtml.cs
+/Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/ShoppingStore/obj/Debug/netcoreapp2.2/Razor/Views/OrderDetail/Index.g.cshtml.cs
+/Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/ShoppingStore/obj/Debug/netcoreapp2.2/Razor/Views/OrderList/Index.g.cshtml.cs

@@ -42,11 +42,8 @@ namespace ShoppingStore.Controllers
                 logger.LogInformation("User:" + username + " registered");
                 return RedirectToRoute(new { controller = "Login", action = "Index" });
             }
-            else 
-            {
-                logger.LogError("User:" + username + " register failed:" + result);
-                return View();
-            }
+            logger.LogError("User:" + username + " register failed:" + result);
+            return View();
         }
     }
 

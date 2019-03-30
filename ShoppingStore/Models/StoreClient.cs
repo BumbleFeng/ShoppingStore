@@ -52,7 +52,7 @@ namespace ShoppingStore.Models
 
         public HttpStatusCode Logout(string token)
         {
-            Client.BaseAddress = new Uri(new Uri(HostUri), "api/user/Logout?token="+token);
+            Client.BaseAddress = new Uri(new Uri(HostUri), "api/user/Logout?token=" + token);
             HttpResponseMessage response = null;
             try
             {
@@ -67,7 +67,7 @@ namespace ShoppingStore.Models
 
         public HttpResponseMessage Item(int id)
         {
-            Client.BaseAddress = new Uri(new Uri(HostUri), "api/Item/"+id);
+            Client.BaseAddress = new Uri(new Uri(HostUri), "api/Item/" + id);
             HttpResponseMessage response = null;
             try
             {
@@ -97,7 +97,7 @@ namespace ShoppingStore.Models
 
         public HttpResponseMessage AddCart(string token, ShoppingCart shoppingCart)
         {
-            Client.BaseAddress = new Uri(new Uri(HostUri), "api/user/AddCart?token="+token);
+            Client.BaseAddress = new Uri(new Uri(HostUri), "api/user/AddCart?token=" + token);
             HttpResponseMessage response = null;
             try
             {
@@ -223,6 +223,5 @@ namespace ShoppingStore.Models
             }
             return response.StatusCode;
         }
-
     }
 }

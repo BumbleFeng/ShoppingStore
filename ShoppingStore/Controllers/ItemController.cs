@@ -27,22 +27,19 @@ namespace ShoppingStore.Controllers
         {
             StoreClient storeClient = new StoreClient(httpClientFactory.CreateClient());
             HttpResponseMessage result = storeClient.Item(id);
-            if (result.IsSuccessStatusCode) 
+            if (result.IsSuccessStatusCode)
             {
                 string s = result.Content.ReadAsStringAsync().Result;
                 Item item = JsonConvert.DeserializeObject<Item>(s);
                 string username = HttpContext.Session.GetString("username");
-                if (string.IsNullOrWhiteSpace(username))
+                if (!string.IsNullOrWhiteSpace(username))
                 {
                     logger.LogInformation("User:" + username + " viewed item:" + id + " " + item.Name);
                 }
                 return View(item);
             }
-            else 
-            {
-                logger.LogError("item:" + id + " not found");
-                return new NotFoundResult(); 
-            }
+            logger.LogError("item:" + id + " not found");
+            return new NotFoundResult();
         }
 
         [HttpPost]
@@ -51,9 +48,9 @@ namespace ShoppingStore.Controllers
         public string AddCart(int itemId, int number)
         {
             string token = HttpContext.Session.GetString("token");
-            if (string.IsNullOrWhiteSpace(token)) 
+            if (string.IsNullOrWhiteSpace(token))
             {
-                return "Please Login First"; 
+                return "Please Login First";
             }
             string username = HttpContext.Session.GetString("username");
             ShoppingCart shoppingCart = new ShoppingCart
@@ -69,16 +66,13 @@ namespace ShoppingStore.Controllers
                 logger.LogInformation("User:" + username + " add item:" + itemId + " with number:" + number + " to cart");
                 return "Add Success";
             }
-            else if (result.StatusCode == HttpStatusCode.BadRequest)
+            if (result.StatusCode == HttpStatusCode.BadRequest)
             {
                 logger.LogError("User:" + username + " add item:" + itemId + " with number:" + number + " failed:out of stock");
                 return "Out of Stock";
             }
-            else
-            {
-                logger.LogError("User:" + username + " add item:" + itemId + " with number:" + number + " failed:" + result.StatusCode);
-                return "Error";
-            }
+            logger.LogError("User:" + username + " add item:" + itemId + " with number:" + number + " failed:" + result.StatusCode);
+            return "Error";
         }
 
         [HttpPost]
@@ -107,22 +101,16 @@ namespace ShoppingStore.Controllers
                     logger.LogInformation("User:" + username + " delete item:" + itemId + " from cart");
                     return "Delete Success";
                 }
-                else
-                {
-                    logger.LogInformation("User:" + username + " update item:" + itemId + " with number:" + number);
-                    return "Success";
-                }
+                logger.LogInformation("User:" + username + " update item:" + itemId + " with number:" + number);
+                return "Success";
             }
-            else if (result.StatusCode == HttpStatusCode.BadRequest)
+            if (result.StatusCode == HttpStatusCode.BadRequest)
             {
                 logger.LogError("User:" + username + " update item:" + itemId + " with number:" + number + " failed:out of stock");
                 return "Out of Stock";
             }
-            else
-            {
-                logger.LogError("User:" + username + " update item:" + itemId + " with number:" + number + " failed:" + result.StatusCode);
-                return "Error";
-            }
+            logger.LogError("User:" + username + " update item:" + itemId + " with number:" + number + " failed:" + result.StatusCode);
+            return "Error";
         }
     }
 }

@@ -43,11 +43,8 @@ namespace ShoppingStore.Controllers
                 logger.LogInformation("User:" + username + " login");
                 return RedirectToRoute(new { controller = "Home", action = "Index" });
             }
-            else
-            {
-                logger.LogError("User:" + username + " login failed:"+ result.StatusCode);
-                return View();
-            }
+            logger.LogError("User:" + username + " login failed: " + result.StatusCode);
+            return View();
         }
 
         [HttpGet]

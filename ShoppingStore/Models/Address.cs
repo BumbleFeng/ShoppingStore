@@ -22,10 +22,6 @@ namespace ShoppingStore.Models
 
         public bool DefaultAddress { get; set; }
 
-        public Address()
-        {
-        }
-
         public string VerifyAddress()
         {
             if (Zip.Length != 5 || !int.TryParse(Zip, out int z))

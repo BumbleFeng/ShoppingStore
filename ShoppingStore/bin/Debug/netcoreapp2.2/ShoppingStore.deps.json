@@ -3324,21 +3324,21 @@
     "NLog/4.5.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7TI+dYvEIOcCN6fjr3yjMN5AtPBSbHNxKGmn/5rkqbBk81MGsnQBkParoGOidibDIe3dwThJJndxl7O3zmd3rA==",
+      "sha512": "sha512-Yni/XrDfbEhaCSXJsDkmW/n5AunhOxZ7OKKb+0U1I1/d8ZaKt3Jjzf20g/xPiKljmYuZKYqI5iI34g138kK8UQ==",
       "path": "nlog/4.5.11",
       "hashPath": "nlog.4.5.11.nupkg.sha512"
     },
     "NLog.Extensions.Logging/1.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FvCGr0FSntm9a8z/QaZv9+01LmEXh9NZ44BExArAn+kwyhPJCze5lnPekoHo0iWUKnwNtJFUo/9XOjFfIs0GXQ==",
+      "sha512": "sha512-XughK7kRM1b+IuG4bZEpShHLweTCRNQb4kDUMsiob03QVpnacgcis6wDS0KlyXYaF/3Itid5b8+VbTBeP4WKhA==",
       "path": "nlog.extensions.logging/1.4.0",
       "hashPath": "nlog.extensions.logging.1.4.0.nupkg.sha512"
     },
     "NLog.Web.AspNetCore/4.8.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UPfIgh06dHYkeEayBrmtuRQ1MjPNHytZI64FCP/IwO5JaXuEQ63HFYiwVuEo/oUTE5k3UKhwnuiKR4XMKyjjXg==",
+      "sha512": "sha512-Bs9tHNwdTDA7FFxS+tqxrr0EQAZjcnex6drcjCni9yHEupZdo5wOJP3oSGe+2W1enHo3RjglM2CvVbFuqbhcXA==",
       "path": "nlog.web.aspnetcore/4.8.0",
       "hashPath": "nlog.web.aspnetcore.4.8.0.nupkg.sha512"
     },
@@ -3352,7 +3352,7 @@
     "Microsoft.AspNetCore/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-P5m7Yb+kbwhLUAJuJm/loG0y2b3WBgXijFrOui4btL1jxukI9xpFOCzaCWrqbGsos4aLivajPb5D6lS7mMmtog==",
+      "sha512": "sha512-Hl46S46kWKE9Q15RyAOGS1bJIsWxB7POuuIr0pRWx/0E/SGCf13MLioIDOElon7egXZatcv4U06b0sBKNE1qJA==",
       "path": "microsoft.aspnetcore/2.2.0",
       "hashPath": "microsoft.aspnetcore.2.2.0.nupkg.sha512"
     },
@@ -4745,7 +4745,7 @@
     "System.Diagnostics.DiagnosticSource/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-83AAzkJIb6ocQob+FrxSHy+4/Db3uXHmuHVanFxmsbj3RRgUo8h34NMJ7dNR/62ISHfltSL70wqcvW/GQNF1cg==",
+      "sha512": "sha512-1f3dN5YJ8ekEPxjOY2BI3Ur2S5AwBEFWZHrZIUdTtZ6VygpVxeFk6bPYlcIc+XfeDo8rjbjGtNJjTUwCSWy2Og==",
       "path": "system.diagnostics.diagnosticsource/4.5.0",
       "hashPath": "system.diagnostics.diagnosticsource.4.5.0.nupkg.sha512"
     },
@@ -4885,7 +4885,7 @@
     "System.Net.Http/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+sAT+xf0BSRz5Wj4wzhcGGIfs31ehgES4cWDWYz9Ih9m2V6WnxxH26mlAaTcHrC+jtstZqvYM+Lq7nQc5qUk0A==",
+      "sha512": "sha512-E6827lMP1L1sa3D0OB/0SM9+i2JGdw629GWm+UdOk4b7CqUFbDHSwSE+1v1qTePMBJrMhF9jVylcR/b36Q145w==",
       "path": "system.net.http/4.3.0",
       "hashPath": "system.net.http.4.3.0.nupkg.sha512"
     },
@@ -4941,7 +4941,7 @@
     "System.Reflection.Emit.ILGeneration/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eq09ZmHVLiiM23xTtpa3+c+NO7cdI9RP3d7tM7GejSqLz7m34ccaBpwljrpqT7cvuB+0W0KuWlUVRB6cGHj/vQ==",
+      "sha512": "sha512-+05ce6QBbwPVeo/Qsu4jYaVGML5DcgLxGpiGlxA8H30yIshbK3coqjxCMRLMqJdFCtF0QapMRP+ujvB9st9YBA==",
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
     },
