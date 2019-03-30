@@ -24,7 +24,7 @@
             <!-- order info -->
             <div>
                 <p>Order ID : <span>@Model.OrderId</span></p>
-                <p>Order Date : <span>@Model.PlacedTime</span></p>
+                <p>Order Date : <time datetime ="@Model.PlacedTime"></time></p>
                 <p>Order Status : <span>@Model.Staus</span></p>
             </div>
             <hr>
@@ -109,6 +109,14 @@
     </div>
 </div>
 @section Scripts{
-    <script src="moment.js"></script>
-    <script src="moment-timezone-with-data.js"></script>
+    <script type="text/javascript" src="~/js/moment.js"></script>
+    <script type="text/javascript" src="~/js/moment-timezone-with-data.js"></script>
+    <script>
+        $(document).ready(function() {
+             $("time").text(function() {
+                var utcTime = $(this).attr("datetime");
+                return moment.utc(utcTime,"MM/DD/YYYY HH:mm:ss").local().format('YYYY-MM-DD HH:mm');
+             })
+        });
+    </script>
 }

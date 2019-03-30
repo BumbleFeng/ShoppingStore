@@ -86,7 +86,6 @@ namespace ShoppingStore.Controllers
             string same = HttpContext.Request.Form["billingAsShipping"];
             if (same == null)
             {
-                same = "F";
                 Address billingAddress = new Address
                 {
                     FirstName = HttpContext.Request.Form["billingFirstname"],
@@ -100,9 +99,10 @@ namespace ShoppingStore.Controllers
                 payment.BillingAddress = billingAddress;
             }
             orderDetail.Payment = payment;
-            if (orderDetail.VerifyOrder()!="vaild")
+
+            if (orderDetail.VerifyOrder() != "vaild")
             {
-                logger.LogError("Verify order:" + JsonConvert.SerializeObject(orderDetail) +" failed: " + orderDetail.VerifyOrder());
+                logger.LogError("Verify order:" + JsonConvert.SerializeObject(orderDetail) + " failed: " + orderDetail.VerifyOrder());
                 return RedirectToRoute(new { controller = "Checkout", action = "Index" });
             }
             StoreClient storeClient = new StoreClient(httpClientFactory.CreateClient());
@@ -110,12 +110,12 @@ namespace ShoppingStore.Controllers
             if (result.IsSuccessStatusCode)
             {
                 string OrderId = result.Content.ReadAsStringAsync().Result;
-                logger.LogInformation("User:"+username+ " plaeced order:" + JsonConvert.SerializeObject(OrderId));
+                logger.LogInformation("User:"+username+ "plaeced order:" + JsonConvert.SerializeObject(OrderId));
                 return Index(OrderId);
             }
             else
             {
-                logger.LogInformation("User:" + username + " plaeced order:" + JsonConvert.SerializeObject(orderDetail) + " failed");
+                logger.LogInformation("User:" + username + "plaeced order:" + JsonConvert.SerializeObject(orderDetail) + " failed");
                 return RedirectToRoute(new { controller = "Checkout", action = "Index" });
             }
         }

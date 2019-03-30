@@ -12,7 +12,7 @@ namespace ShoppingStore.Models
 
         public StoreClient(HttpClient client)
         {
-            HostUri = "https://shoppingstoreapi.azurewebsites.net";
+            HostUri = "https://shoppintstoreapi.azurewebsites.net";
             Client = client;
         }
 

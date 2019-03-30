@@ -10,10 +10,9 @@ namespace ShoppingStore.Models
         public string Staus { get; set; }
         public DateTime PlacedTime { get; set; }
         public double Total { get; set; }
+        public User User { get; set; }
 
         public IList<OrderItem> OrderItems { get; set; }
-
-        public User User { get; set; }
 
         public int ShippingAddressId { get; set; }
         public Address ShippingAddress { get; set; }

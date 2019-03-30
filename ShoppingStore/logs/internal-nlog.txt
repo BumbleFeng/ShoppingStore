@@ -1,132 +1,18 @@
-2019-03-03 18:24:08.7170 Info Message Template Auto Format enabled
-2019-03-03 18:24:08.7484 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-03 18:24:08.8317 Info Adding target File Target[allfile]
-2019-03-03 18:24:08.8468 Info Adding target File Target[ownFile-web]
-2019-03-03 18:24:08.8549 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-03 18:24:08.8745 Info Found 44 configuration items
-2019-03-29 13:05:17.2973 Info Message Template Auto Format enabled
-2019-03-29 13:05:17.3373 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 13:05:17.4217 Info Adding target File Target[allfile]
-2019-03-29 13:05:17.4366 Info Adding target File Target[ownFile-web]
-2019-03-29 13:05:17.4450 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 13:05:17.4648 Info Found 44 configuration items
-2019-03-29 13:13:10.9008 Info Message Template Auto Format enabled
-2019-03-29 13:13:10.9216 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 13:13:11.0044 Info Adding target File Target[allfile]
-2019-03-29 13:13:11.0173 Info Adding target File Target[ownFile-web]
-2019-03-29 13:13:11.0256 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 13:13:11.0443 Info Found 44 configuration items
-2019-03-29 16:43:26.1043 Info Message Template Auto Format enabled
-2019-03-29 16:43:26.1253 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 16:43:26.2116 Info Adding target File Target[allfile]
-2019-03-29 16:43:26.2264 Info Adding target File Target[ownFile-web]
-2019-03-29 16:43:26.2347 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 16:43:26.2544 Info Found 44 configuration items
-2019-03-29 17:28:05.1208 Info Message Template Auto Format enabled
-2019-03-29 17:28:05.1445 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 17:28:05.2273 Info Adding target File Target[allfile]
-2019-03-29 17:28:05.2406 Info Adding target File Target[ownFile-web]
-2019-03-29 17:28:05.2487 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 17:28:05.2689 Info Found 44 configuration items
-2019-03-29 17:35:47.0481 Info Message Template Auto Format enabled
-2019-03-29 17:35:47.0676 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 17:35:47.1511 Info Adding target File Target[allfile]
-2019-03-29 17:35:47.1638 Info Adding target File Target[ownFile-web]
-2019-03-29 17:35:47.1718 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 17:35:47.1917 Info Found 44 configuration items
-2019-03-29 18:08:08.1067 Info Message Template Auto Format enabled
-2019-03-29 18:08:08.1354 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 18:08:08.3106 Info Adding target File Target[allfile]
-2019-03-29 18:08:08.3294 Info Adding target File Target[ownFile-web]
-2019-03-29 18:08:08.3389 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 18:08:08.3633 Info Found 44 configuration items
-2019-03-29 18:15:26.2434 Info Message Template Auto Format enabled
-2019-03-29 18:15:26.2686 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 18:15:26.3495 Info Adding target File Target[allfile]
-2019-03-29 18:15:26.3631 Info Adding target File Target[ownFile-web]
-2019-03-29 18:15:26.3712 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 18:15:26.3929 Info Found 44 configuration items
-2019-03-29 18:21:39.9451 Info Message Template Auto Format enabled
-2019-03-29 18:21:39.9720 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 18:21:40.0536 Info Adding target File Target[allfile]
-2019-03-29 18:21:40.0660 Info Adding target File Target[ownFile-web]
-2019-03-29 18:21:40.0740 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 18:21:40.0929 Info Found 44 configuration items
-2019-03-29 18:25:19.0610 Info Message Template Auto Format enabled
-2019-03-29 18:25:19.0811 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 18:25:19.1653 Info Adding target File Target[allfile]
-2019-03-29 18:25:19.1780 Info Adding target File Target[ownFile-web]
-2019-03-29 18:25:19.1870 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 18:25:19.2063 Info Found 44 configuration items
-2019-03-29 18:35:27.0909 Info Message Template Auto Format enabled
-2019-03-29 18:35:27.1117 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 18:35:27.1994 Info Adding target File Target[allfile]
-2019-03-29 18:35:27.2128 Info Adding target File Target[ownFile-web]
-2019-03-29 18:35:27.2225 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 18:35:27.2481 Info Found 44 configuration items
-2019-03-29 19:51:53.4201 Info Message Template Auto Format enabled
-2019-03-29 19:51:53.4471 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 19:51:53.5321 Info Adding target File Target[allfile]
-2019-03-29 19:51:53.5456 Info Adding target File Target[ownFile-web]
-2019-03-29 19:51:53.5537 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 19:51:53.5730 Info Found 44 configuration items
-2019-03-29 21:08:02.5859 Info Message Template Auto Format enabled
-2019-03-29 21:08:02.6410 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-29 21:08:02.8490 Info Adding target File Target[allfile]
-2019-03-29 21:08:02.8938 Info Adding target File Target[ownFile-web]
-2019-03-29 21:08:02.9168 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-29 21:08:02.9664 Info Found 44 configuration items
-2019-03-30 02:49:23.1599 Info Message Template Auto Format enabled
-2019-03-30 02:49:23.1897 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 02:49:23.2776 Info Adding target File Target[allfile]
-2019-03-30 02:49:23.2901 Info Adding target File Target[ownFile-web]
-2019-03-30 02:49:23.2993 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 02:49:23.3214 Info Found 44 configuration items
-2019-03-30 03:50:24.5224 Info Message Template Auto Format enabled
-2019-03-30 03:50:24.5434 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 03:50:24.6340 Info Adding target File Target[allfile]
-2019-03-30 03:50:24.6473 Info Adding target File Target[ownFile-web]
-2019-03-30 03:50:24.6559 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 03:50:24.6750 Info Found 44 configuration items
-2019-03-30 05:37:34.3604 Info Message Template Auto Format enabled
-2019-03-30 05:37:34.3849 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 05:37:34.4725 Info Adding target File Target[allfile]
-2019-03-30 05:37:34.4853 Info Adding target File Target[ownFile-web]
-2019-03-30 05:37:34.4943 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 05:37:34.5161 Info Found 44 configuration items
-2019-03-30 05:39:31.4198 Info Message Template Auto Format enabled
-2019-03-30 05:39:31.4422 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 05:39:31.5354 Info Adding target File Target[allfile]
-2019-03-30 05:39:31.5485 Info Adding target File Target[ownFile-web]
-2019-03-30 05:39:31.5567 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 05:39:31.5802 Info Found 44 configuration items
-2019-03-30 05:46:13.0773 Info Message Template Auto Format enabled
-2019-03-30 05:46:13.0982 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 05:46:13.1812 Info Adding target File Target[allfile]
-2019-03-30 05:46:13.1929 Info Adding target File Target[ownFile-web]
-2019-03-30 05:46:13.2016 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 05:46:13.2206 Info Found 44 configuration items
-2019-03-30 06:14:46.8682 Info Message Template Auto Format enabled
-2019-03-30 06:14:46.8927 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 06:14:46.9810 Info Adding target File Target[allfile]
-2019-03-30 06:14:46.9953 Info Adding target File Target[ownFile-web]
-2019-03-30 06:14:47.0041 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 06:14:47.0243 Info Found 44 configuration items
-2019-03-30 06:59:39.3169 Info Message Template Auto Format enabled
-2019-03-30 06:59:39.3526 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 06:59:39.4487 Info Adding target File Target[allfile]
-2019-03-30 06:59:39.4611 Info Adding target File Target[ownFile-web]
-2019-03-30 06:59:39.4696 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 06:59:39.4888 Info Found 44 configuration items
-2019-03-30 07:00:09.4349 Info Message Template Auto Format enabled
-2019-03-30 07:00:09.4639 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 07:00:09.5599 Info Adding target File Target[allfile]
-2019-03-30 07:00:09.5712 Info Adding target File Target[ownFile-web]
-2019-03-30 07:00:09.5793 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 07:00:09.5999 Info Found 44 configuration items
-2019-03-30 07:05:09.0620 Info Message Template Auto Format enabled
-2019-03-30 07:05:09.0948 Info Loading assembly: NLog.Web.AspNetCore
-2019-03-30 07:05:09.1990 Info Adding target File Target[allfile]
-2019-03-30 07:05:09.2115 Info Adding target File Target[ownFile-web]
-2019-03-30 07:05:09.2217 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-03-30 07:05:09.2421 Info Found 44 configuration items
+2019-03-30 07:58:54.8770 Info Message Template Auto Format enabled
+2019-03-30 07:58:54.8982 Info Loading assembly: NLog.Web.AspNetCore
+2019-03-30 07:58:54.9851 Info Adding target File Target[allfile]
+2019-03-30 07:58:54.9981 Info Adding target File Target[ownFile-web]
+2019-03-30 07:58:55.0089 Info Configured from an XML element in /Users/BumbleBee/Downloads/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
+2019-03-30 07:58:55.0295 Info Found 44 configuration items
+2019-03-30 08:05:13.6825 Info Message Template Auto Format enabled
+2019-03-30 08:05:13.7104 Info Loading assembly: NLog.Web.AspNetCore
+2019-03-30 08:05:13.8190 Info Adding target File Target[allfile]
+2019-03-30 08:05:13.8301 Info Adding target File Target[ownFile-web]
+2019-03-30 08:05:13.8390 Info Configured from an XML element in /Users/BumbleBee/Downloads/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
+2019-03-30 08:05:13.8595 Info Found 44 configuration items
+2019-03-30 08:08:13.4797 Info Message Template Auto Format enabled
+2019-03-30 08:08:13.5074 Info Loading assembly: NLog.Web.AspNetCore
+2019-03-30 08:08:13.6157 Info Adding target File Target[allfile]
+2019-03-30 08:08:13.6272 Info Adding target File Target[ownFile-web]
+2019-03-30 08:08:13.6353 Info Configured from an XML element in /Users/BumbleBee/Downloads/Assignment6/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
+2019-03-30 08:08:13.6552 Info Found 44 configuration items

@@ -31,7 +31,7 @@ namespace ShoppingStore.Controllers
             IEnumerable<Item> items = JsonConvert.DeserializeObject<IEnumerable<Item>>(s);
             System.Diagnostics.Debug.WriteLine(items.Count());
             string username = HttpContext.Session.GetString("username");
-            if (!string.IsNullOrWhiteSpace(username))
+            if (string.IsNullOrWhiteSpace(username))
             {
                 if (string.IsNullOrWhiteSpace(type))
                     logger.LogInformation("User:" + username + " viewed all items");

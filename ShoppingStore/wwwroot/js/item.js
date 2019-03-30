@@ -22,20 +22,19 @@ function name(){
  name();
 
 function number(){
-  $(".selnum .add").on("click",function(){
-        var n= $(this).prev().val();
+	var n=1;
+	$(".selnum .add").click(function(){
         n++;
-        $(this).prev().val(n);
-    });
+        $(".selnum input").val(n)
+  })
 
-  $(".selnum .remove").on("click",function(){
-      var n= $(this).next().val();
-      n--;
-      if (n < 1) {
-        n = 1;
-      };
-      $(this).next().val(n);
-  });
+	$(".selnum .remove").click(function(){
+        n--;
+        if (n<1) {
+        	n=1;
+        };
+        $(".selnum input").val(n)
+  })
 
 }
  number();

@@ -26,7 +26,7 @@
             {
                 <li class="order-item clear">
                     <div class="order-item-info"><a href="/OrderDetail/@order.OrderId">@order.OrderId</a></div>
-                    <div class="order-item-info" data-ute-time="@order.PlacedTime"></div>
+                    <time class="order-item-info" datetime="@order.PlacedTime"></time>
                     <div class="order-item-info">@order.Staus</div>
                     <div class="order-item-info">$@order.Total</div>
                 </li>
@@ -35,13 +35,14 @@
     </div>
 </div>
 @section Scripts{
-    <script src="moment.js"></script>
-    <script src="moment-timezone-with-data.js"></script>
+    <script type="text/javascript" src="~/js/moment.js"></script>
+    <script type="text/javascript" src="~/js/moment-timezone-with-data.js"></script>
     <script>
         $(document).ready(function() {
-            $("[data-utc-time]").text(function() {
-                var utcTime = $(this).attr("data-utc-time");
-                return moment.utc(utcTime,"MM/DD/YYYY HH:mm:ss").local().format('DD.MM.YYYY HH:mm');
+             $("time").text(function() {
+                var utcTime = $(this).attr("datetime");
+                return moment.utc(utcTime,"MM/DD/YYYY HH:mm:ss").local().format('YYYY-MM-DD HH:mm');
+             })
         });
     </script>
 }

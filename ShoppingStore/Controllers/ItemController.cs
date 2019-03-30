@@ -32,7 +32,7 @@ namespace ShoppingStore.Controllers
                 string s = result.Content.ReadAsStringAsync().Result;
                 Item item = JsonConvert.DeserializeObject<Item>(s);
                 string username = HttpContext.Session.GetString("username");
-                if (!string.IsNullOrWhiteSpace(username))
+                if (string.IsNullOrWhiteSpace(username))
                 {
                     logger.LogInformation("User:" + username + " viewed item:" + id + " " + item.Name);
                 }

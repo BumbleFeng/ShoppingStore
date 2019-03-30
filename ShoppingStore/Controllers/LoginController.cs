@@ -45,7 +45,7 @@ namespace ShoppingStore.Controllers
             }
             else
             {
-                logger.LogError("User:" + username + " login failed:" + result.StatusCode);
+                logger.LogError("User:" + username + " login failed:"+ result.StatusCode);
                 return View();
             }
         }

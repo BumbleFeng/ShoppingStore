@@ -30,6 +30,8 @@ namespace ShoppingStore.Models
         {
             if (Zip.Length != 5 || !int.TryParse(Zip, out int z))
                 return "Invalid ZipCode";
+            if (Phone == "")
+                Phone = null;
             if (Phone != null && !long.TryParse(Phone, out long p))
                 return "Invalid Phone Number";
 
