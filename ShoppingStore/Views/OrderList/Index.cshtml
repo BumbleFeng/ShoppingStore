@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ShoppingStore.Models.OrderDetail>
+@{
+    ViewData["Title"] = "Order List";
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/orderlist.css">
+}
+<!-- orderlist -->
+<div class="orderlist-bg">
+    <div class="clear orderlist-wrapper">
+        <!-- orderlist title -->
+        <div class="hd clear">
+            <div class="hd-left lf">
+                <h3>My Orders</h3>
+            </div>
+        </div>
+
+        <ul class="orderlist">
+            <li class="order-item clear">
+                <strong class="order-item-info">Order ID</strong>
+                <strong class="order-item-info">Order Date</strong>
+                <strong class="order-item-info">Status</strong>
+                <strong class="order-item-info">Total</strong>
+            </li>
+            @foreach (var order in Model)
+            {
+                <li class="order-item clear">
+                    <div class="order-item-info"><a href="/OrderDetail/@order.OrderId">@order.OrderId</a></div>
+                    <div class="order-item-info" data-ute-time="@order.PlacedTime"></div>
+                    <div class="order-item-info">@order.Staus</div>
+                    <div class="order-item-info">$@order.Total</div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+@section Scripts{
+    <script src="moment.js"></script>
+    <script src="moment-timezone-with-data.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("[data-utc-time]").text(function() {
+                var utcTime = $(this).attr("data-utc-time");
+                return moment.utc(utcTime,"MM/DD/YYYY HH:mm:ss").local().format('DD.MM.YYYY HH:mm');
+        });
+    </script>
+}

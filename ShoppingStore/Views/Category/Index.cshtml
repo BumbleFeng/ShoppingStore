@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ShoppingStore.Models.Item>
+@{
+    ViewData["Title"] = "Category";
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/category.css">
+}
+
+<!-- category -->
+<div class="w clear category-bg">
+    <div class="category-wrap">
+        <aside class="category-aside lf">
+            <ul class="category-link">
+                <li><a href="/category">All</a></li>
+                <hr>
+                <li><a href="/category?type=Laptop">Laptop</a></li>
+                <hr>
+                <li><a href="/category?type=Book">Book</a></li>
+                <hr>
+                <li><a href="/category?type=CD">CD</a></li>
+            </ul>
+        </aside>
+
+        <ul class="w clear category-list lf">
+            @foreach (var item in Model)
+            {
+                <li class="lf">
+                    <a href="/item/@item.ItemId">
+                        <img src="~/img/@item.Image">
+                    </a>
+                    <div class="text">
+                        <p><a href="/item/@item.ItemId">@item.Name</a></p>
+                        <div>
+                            <span class="lf">@item.Price</span>
+                            <button class="rf" type="button" onclick="addCart(@item.ItemId)">Add to Cart</button>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+        </main>
+    </div>
+
+</div>
+
+@section Scripts{
+    <script>
+        function addCart(id) {
+            $.ajax({
+                type : "POST",
+                url : "/item/AddCart",
+                data : {
+                    itemId : id,
+                    number : 1
+                },
+                success : function(result) {
+                    alert(result);
+                }
+           });
+        }
+    </script>
+}

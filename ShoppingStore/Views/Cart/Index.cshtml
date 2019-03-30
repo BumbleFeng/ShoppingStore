@@ -1,0 +1,122 @@
+﻿@model IEnumerable<ShoppingStore.Models.ShoppingCart>
+@{
+    ViewData["Title"] = "Shopping Cart";
+    var total = 0.0;
+}
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/cart.css">
+}
+
+<!-- cart -->
+<div class="cart-bg">
+
+    <!-- cart title -->
+    <div class="w hd clear">
+        <div class="hd-left lf">
+            <h3>Shopping Cart</h3>
+        </div>
+    </div>
+
+    <!-- cart wrap -->
+    <div class="cart-wrap">
+        <table class="w clear cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <td>Title</td>
+                    <td>Unit Price</td>
+                    <td>Amount</td>
+                    <td>Edit</td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @foreach (var cart in Model)
+                    {
+                        total += cart.Item.Price * cart.Number;
+                        <tr>
+                            <th>
+                                <img src="~/img/@cart.Item.Image" class="item-img">
+                            </th>
+                            <td> <a href="/item/@cart.Item.ItemId">@cart.Item.Name</a></td>
+                            <td>$@cart.Item.Price</td>
+                            <td>
+                                <!-- amount -->
+                                <div class="number clear">
+                                    <div class="selnum lf">
+                                        <span class="remove">
+                                            <i class="hx"></i>
+                                        </span>
+                                        <input id="@cart.Item.ItemId" type="text" value="@cart.Number">
+                                        <span class="add">
+                                            <i class="hx"></i>
+                                            <i class="sx"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="javascript:updateCart(@cart.Item.ItemId);">Update</a>
+                                <a href="javascript:deleteCart(@cart.Item.ItemId);">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2">Total</th>
+                    <td colspan="3">$@total</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="w hd">
+            <form action="Checkout" method="Get">
+                <input type="submit" class="checkoutBtn" value="Checkout" />
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
+
+@section Scripts{
+    <script type="text/javascript" src="~/js/cart.js"></script>
+    <script>
+        function deleteCart(id) {
+            $.ajax({
+                type : "POST",
+                url : "/item/UpdateCart",
+                data : {
+                    itemId : id,
+                    number : 0
+                },
+                success : function(result) {
+                    alert(result);
+                    window.location.reload();
+                }
+           });
+        }
+        function updateCart(id) {
+            var i = "#"+id;
+            $.ajax({
+                type : "POST",
+                url : "/item/UpdateCart",
+                data : {
+                    itemId : id,
+                    number : $(i).val()
+                },
+                success : function(result) {
+                    if(result!="Success"){
+                        alert(result);
+                    }
+                    window.location.reload();
+                }
+           });
+        }
+    </script>
+}

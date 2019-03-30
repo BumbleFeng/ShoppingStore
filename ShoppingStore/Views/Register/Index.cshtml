@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/login.css">
+}
+<!-- register -->
+<div class="m-bdbg">
+    <div class="g-row w clear">
+        <div class="page">
+            <h3>Register</h3>
+            <div class="m-cnt">
+                <form id="login-form" method="post" action="register">
+                    <div class="m-container">
+                        <div class="input-box" id="account-box">
+                            <div class="u-logo lf">
+                                <div class="u-logo-img1 img"></div>
+                            </div>
+                            <input type="email" placeholder="username" name="username" class="inputtext" required>
+                        </div>
+                        <div class="input-box" id="sub-box">
+                            <div class="u-logo lf">
+                                <div class="u-logo-img2 img"></div>
+                            </div>
+                            <input type="password" placeholder="password" name="password" class="inputtext" minlength="8" required>
+                        </div>
+                        <input class="loginbox" type="submit" value="Register" />
+                        <div class="un-login">
+                            <a href="login" class="rf">login</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

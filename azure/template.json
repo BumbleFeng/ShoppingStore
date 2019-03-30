@@ -1,0 +1,54 @@
+{
+  "variables": {
+    "azure_ad_tenant_id": "ad082942-7271-4a26-9a4e-57f03a8847ba",
+    "azure_subscription_id": "f8e73325-bd05-48f1-86fd-cb5e25f02980",
+    "app_id": "b7b56bda-052e-4ee2-be89-a62983e1aa06",
+    "client_secret": "2064cf32-7f2c-4949-899b-55c99126f3b9",
+    "resource_group": "Packer-Sitecore",
+    "storage_account": "packersitecorestorage",
+	  "image_name": "packer-website-feng-001"
+  },
+  "builders": [
+    {
+      "type": "azure-arm",
+      "subscription_id": "{{user `azure_subscription_id`}}",
+      "tenant_id": "{{user `azure_ad_tenant_id`}}",
+      "client_id": "{{user `app_id`}}",
+      "client_secret": "{{user `client_secret`}}",
+      "cloud_environment_name": "Public",
+      "location": "East US",
+	  
+      "vm_size": "Standard_DS2_v2",
+	  
+	    "managed_image_name": "{{user `image_name`}}",
+	    "managed_image_resource_group_name": "{{user `resource_group`}}",
+	  
+      "os_type": "Windows",
+      "image_publisher": "MicrosoftWindowsServer",
+      "image_offer": "WindowsServer",
+      "image_sku": "2016-Datacenter",
+      "image_version": "latest",
+	  
+      "communicator": "winrm",
+      "winrm_use_ssl": "true",
+      "winrm_insecure": "true",
+      "winrm_timeout": "3m",
+      "winrm_username": "packer"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "../Website.zip",
+      "destination": "c:/temp/Website.zip"
+    },
+    {
+      "type": "powershell",
+      "scripts": [
+        "./install-feature.ps1",
+        "./configure-website.ps1",
+		    "./generalize.ps1"
+      ]
+    }
+  ]
+}

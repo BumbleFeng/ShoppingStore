@@ -1,0 +1,141 @@
+﻿@model ShoppingStore.Models.Item
+@{
+    ViewData["Title"] = "Product";
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/item.css">
+}
+<!-- category -->
+<div class="sort">
+    <div class="w sort1">
+        <a href="#">@Model.Category</a>
+        <span class="s-ico"></span>
+        <a href="/category?type=@Model.Type">@Model.Type</a>
+        <span class="s-ico"></span>
+        <span class="color">@Model.Name</span>
+    </div>
+</div>
+
+<div class="g-bg clear">
+    <div class="w pb80 clear">
+
+        <!-- pictures and info -->
+        <div class="detail-top clear">
+            <!-- left part: pics -->
+            <div class="slide lf">
+                <div class="view lf">
+                    <img src="~/img/@Model.Image" style="display:block">
+                </div>
+
+            </div>
+            <!-- right part:product info -->
+            <div class="info rf">
+                <div class="intro">
+                    <div class="name lf">@Model.Name</div>
+                    @if (Model.NewTag)
+                    {
+                        <div class="newTag lf">new</div>
+                    }
+                    <div class="desc">by @Model.Seller</div>
+                </div>
+                <!-- sale time -->
+                <div class="d-time">
+                    <span class="spring">Limited Time &nbsp; &nbsp;</span>
+                    <span class="end">
+                        ends in
+                        <span class="hour">11</span>
+                        h
+                        <span class="minute">11</span>
+                        m
+                        <span class="seconds">11</span>
+                        s
+                    </span>
+                </div>
+
+                <!-- sale price -->
+                <div class="price">
+                    <div class="fied">
+                        <span class="label">price</span>
+                        <span class="rmb">$</span>
+                        <span class="num">@Model.Price</span>
+                        <span class="op">$<del>@Model.Original</del></span>
+                    </div>
+                    <div class="server">
+                        <span class="label">service</span>
+                        <div class="line">
+                            <i></i>
+                            free shipping
+                            <span></span>
+                            <i></i>
+                            free return
+                            <span></span>
+                            <i></i>
+                            fast refund
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- title -->
+                <div class="param clear">
+                    <span class="name lf">type</span>
+                    <div class="tab lf">
+                        @Model.Name
+                        <i></i>
+                    </div>
+                </div>
+                <!-- amount -->
+                <div class="number clear">
+                    <span class="name lf">amount</span>
+                    <div class="selnum lf">
+                        <span class="remove"><i class="hx"></i></span>
+                        <input id="amount" type="text" value="1">
+                        <span class="add">
+                            <i class="hx"></i>
+                            <i class="sx"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- stock -->
+                <div class="param clear">
+                    <span class="name lf">stock</span>
+                    <div class="tab lf">
+                        @Model.Stock
+                        <i></i>
+                    </div>
+                </div>
+                <!-- buttons -->
+                <div class="btns">
+                    <a href="javascript:;" class="btn1 lf">Buy Now</a>
+                    <a href="javascript:addCart();" class="btn2 lf">
+                        <i></i>
+                        <span>Add to Cart</span>
+                    </a>
+                    <div class="zone lf">
+                        <span></span>
+                        <p>favorite</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script type="text/javascript" src="~/js/item.js"></script>
+    <script>
+        function addCart() {
+            $.ajax({
+                type : "POST",
+                url : "/item/AddCart",
+                data : {
+                    itemId : @Model.ItemId,
+                    number : $("#amount").val()
+                },
+                success : function(result) {
+                    alert(result);
+                }
+           });
+        }
+    </script>
+}

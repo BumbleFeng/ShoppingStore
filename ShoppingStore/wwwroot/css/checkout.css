@@ -1,0 +1,94 @@
+.checkout-bg{
+	background-color: #ededed;
+}
+.checkout-wrapper{
+	width: 960px;
+	margin:0 auto;
+}
+/*left part*/
+.checkout-form-wrapper{
+	float: left;
+	width: 65%;
+	font-size: 1rem;
+}
+
+.billing-input-wrapper, .payment-wrapper, .payment-method-wrapper, .payment-input-wrapper{
+	width: 100%;
+}
+
+.billing-input-wrapper label, .payment-input-wrapper label{
+	display: inline-block;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+.billing-input-wrapper input, .payment-input-wrapper input{
+	display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    box-sizing: border-box;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.left-input{
+	width: 45%;
+	float: left;
+	margin-right: 10%;
+}
+.right-input{
+	width: 45%;
+	float: left;
+}
+.one-third-input{
+	width: 26%;
+	float: left;
+	margin-right: 11%;
+}
+.one-third-input:last-child{
+	margin-right: 0;
+}
+.payment-method, #billingCheckBox{
+	margin-bottom: 1.25rem;
+}
+.placeOrderBtn{
+	display: block;
+	margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 40px;
+    line-height:40px;
+    text-align: center;
+    background: #b4a078;
+    font-size: 18px;
+    color: #fff;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+
+/*right part*/
+.checkout-order-wrapper{
+	float: left;
+	width: 30%;
+	margin-left: 5%;
+}
+.cart-item{
+	border:1px solid rgba(0,0,0,.125);
+	margin-bottom: -2px;
+	background-color: #fff;
+	padding: .75rem 1.25rem;
+}
+.cart-item:first-child{
+	border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.cart-item:last-child{
+	border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}

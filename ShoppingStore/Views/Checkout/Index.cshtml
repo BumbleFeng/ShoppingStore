@@ -1,0 +1,183 @@
+﻿@model ShoppingStore.Models.User
+@{
+    ViewData["Title"] = "Checkout";
+    var total = 0.0;
+}
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/checkout.css">
+}
+<!-- checkout -->
+<div class="checkout-bg">
+    <div class="clear checkout-wrapper">
+        <!-- left part -->
+        <form class="clear checkout-form-wrapper" action="OrderDetail" method="post">
+
+            <!-- shipping title -->
+            <div class="hd clear">
+                <div class="hd-left lf">
+                    <h3>Shipping address</h3>
+                </div>
+            </div>
+            <!-- shipping input part -->
+            <div class="clear billing-input-wrapper">
+                <div class="left-input">
+                    <label for="shippingFirstname">First Name</label>
+                    <input type="text" name="shippingFirstname" id="shippingFirstname" required>
+                </div>
+                <div class="right-input">
+                    <label for="shippingLastname">Last Name</label>
+                    <input type="text" name="shippingLastname" id="shippingLastname" required>
+                </div>
+                <div>
+                    <label for="shippingPhone">Phone</label>
+                    <input type="tel" name="shippingPhone" id="shippingPhone" pattern="[0-9]{10,11}">
+                </div>
+                <div>
+                    <label for="shippingAddress1">Address1</label>
+                    <input type="text" name="shippingAddress1" id="shippingAddress1" required>
+                </div>
+                <div>
+                    <label for="shippingAddress2">Address2</label>
+                    <input type="text" name="shippingAddress2" id="shippingAddress2">
+                </div>
+                <div class="one-third-input">
+                    <label for="shippingCity">City</label>
+                    <input type="text" name="shippingCity" id="shippingCity" required>
+                </div>
+                <div class="one-third-input">
+                    <label for="shippingState">State</label>
+                    <input type="text" name="shippingState" id="shippingState" required>
+                </div>
+                <div class="one-third-input">
+                    <label for="shippingZip">Zip</label>
+                    <input type="text" name="shippingZip" id="shippingZip" pattern="[0-9]{5}" required>
+                </div>
+            </div>
+            <hr>
+            <!-- billing title -->
+            <div class="hd clear">
+                <div class="hd-left lf">
+                    <h3>Billing address</h3>
+                </div>
+            </div>
+
+            <div id="billingCheckBox">
+                <input type="checkbox" id="billingCheck" name="billingAsShipping">
+                <label for="billingCheck">Billing address is the same as shipping address</label>
+            </div>
+            <!-- billing input part -->
+            <div class="clear billing-input-wrapper" id="billing" style="display: block;">
+                <div class="left-input">
+                    <label for="billingFirstname">First Name</label>
+                    <input class="billingInput" type="text" name="billingFirstname" id="billingFirstname" required="required">
+                </div>
+                <div class="right-input">
+                    <label for="billingLastname">Last Name</label>
+                    <input class="billingInput" type="text" name="billingLastname" id="billingLastname" required="required">
+                </div>
+                <div>
+                    <label for="billingAddress1">Address1</label>
+                    <input class="billingInput" type="text" name="billingAddress1" id="billingAddress1" required="required">
+                </div>
+                <div>
+                    <label for="billingAddress2">Address2</label>
+                    <input type="text" name="billingAddress2" id="billingAddress2">
+                </div>
+                <div class="one-third-input">
+                    <label for="billingCity">City</label>
+                    <input class="billingInput" type="text" name="billingCity" id="billingCity" required="required">
+                </div>
+                <div class="one-third-input">
+                    <label for="billingState">State</label>
+                    <input class="billingInput" type="text" name="billingState" id="billingState" required="required">
+                </div>
+                <div class="one-third-input">
+                    <label for="billingZip">Zip</label>
+                    <input class="billingInput" type="text" name="billingZip" id="billingZip" pattern="[0-9]{5}" required="required">
+                </div>
+            </div>
+
+            <hr>
+            <!-- payment title-->
+            <div class="hd clear">
+                <div class="hd-left lf">
+                    <h3>Payment</h3>
+                </div>
+            </div>
+            <!-- payment wrapper -->
+            <div class="clear payment-wrapper">
+                <!-- payment method select -->
+                <div class="clear payment-method-wrapper">
+                    <div class="payment-method">
+                        <input type="radio" id="credit" name="paymentMethod" value="Credit card" checked>
+                        <label for="credit">Credit card</label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="debit" name="paymentMethod" value="Debit card">
+                        <label for="debit">Debit card</label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="paypal" name="paymentMethod" value="PayPal">
+                        <label for="paypal">PayPal</label>
+                    </div>
+                </div>
+                <!-- card info -->
+                <div class="clear payment-input-wrapper">
+                    <div>
+                        <label for="cardNumber">Card number</label>
+                        <input type="text" name="cardNumber" id="cardNumber" required pattern="[0-9]{16}">
+                    </div>
+                    <div>
+                        <label for="nameOnCard">Name on card</label>
+                        <input type="text" name="nameOnCard" id="nameOnCard" required>
+                    </div>
+                    <div class="left-input">
+                        <label for="expire">Expiration</label>
+                        <input type="month" name="expire" id="expire" required>
+                    </div>
+                    <div class="right-input">
+                        <label for="cvv">CVV</label>
+                        <input type="text" name="cvv" id="cvv" required pattern="[0-9]{3}">
+                    </div>
+                </div>
+
+                <hr>
+                <button class="clear placeOrderBtn" type="submit">Place Order</button>
+            </div>
+        </form>
+
+        <!-- right part -->
+        <aside class="checkout-order-wrapper">
+            <!-- order title -->
+            <div class="w hd clear">
+                <div class="hd-left lf">
+                    <h3>Your cart</h3>
+                </div>
+            </div>
+
+            <ul>
+                @foreach (var cart in Model.ShoppingCarts)
+                {
+                    total += cart.Item.Price * cart.Number;
+                    <li class="cart-item clear">
+                        <div class="cart-item-name lf">
+                            <h6>@cart.Item.Name</h6>
+                            <small>x @cart.Number</small>
+                        </div>
+                        <div class="cart-item-price rf">$@cart.Item.Price</div>
+                    </li>
+                }
+                <li class="cart-item clear">
+                    <div class="cart-item-name lf">
+                        <h6>Total</h6>
+                    </div>
+                    <strong class="cart-item-price rf">$@total</strong>
+                </li>
+            </ul>
+        </aside>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript" src="~/js/checkout.js"></script>
+}

@@ -1,0 +1,14 @@
+﻿@model string
+
+@if (Model == null)
+{
+    <li><a href="/login" class="mr20">Login</a></li>
+    <li><a href="/register" class="mr20">Register</a></li>
+}
+else
+{
+    <li class="mr20">Welcome, @Model </li>
+    <li><a href="/cart" class="mr20">Cart</a></li>
+    <li><a href="/OrderList" class="mr20">Order</a></li>
+    <li><a href="/login/logout" class="mr20">Logout</a></li>
+}

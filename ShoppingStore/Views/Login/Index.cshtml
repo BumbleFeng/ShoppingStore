@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/login.css">
+}
+
+<!-- login -->
+<div class="m-bdbg">
+    <div class="g-row w clear">
+        <div class="page">
+            <h3>Login</h3>
+            <div class="m-cnt">
+                <form id="login-form" method="post" action="login">
+                    <div class="m-container">
+                        <div class="input-box" id="account-box">
+                            <div class="u-logo lf">
+                                <div class="u-logo-img1 img"></div>
+                            </div>
+                            <input type="text" placeholder="username" name="username" class="inputtext">
+                        </div>
+                        <div class="input-box" id="sub-box">
+                            <div class="u-logo lf">
+                                <div class="u-logo-img2 img"></div>
+                            </div>
+                            <input type="password" placeholder="password" name="password" class="inputtext">
+                        </div>
+                        <input class="loginbox" type="submit" value="Login" />
+                        <div class="un-login">
+                            <a href="#" class="lf">forget password?</a>
+                            <a href="register" class="rf">register</a>
+                        </div>
+                        <div class="outher">
+                            <div class="line"></div>
+                            <div class="text">OR login by</div>
+                        </div>
+                        <div class="olist">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="weixin"></i>
+                                        <span>WeChat</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="qq"></i>
+                                        <span>QQ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="weibo"></i>
+                                        <span>Sina</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
