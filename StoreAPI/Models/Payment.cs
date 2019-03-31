@@ -36,10 +36,6 @@ namespace StoreAPI.Models
 
         [JsonIgnore]
         public virtual OrderDetail OrderDetail { get; set; }
-
-        public Payment()
-        {
-        }
     }
 
     public class PaymentMap : IEntityTypeConfiguration<Payment>

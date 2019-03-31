@@ -17,10 +17,6 @@ namespace StoreAPI.Models
         public string OrderId { get; set; }
 
         public OrderDetail OrderDetail { get; set; }
-        
-        public Tracking()
-        {
-        }
     }
 
     public class TrackingMap : IEntityTypeConfiguration<Tracking>

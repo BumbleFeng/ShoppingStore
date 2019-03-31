@@ -23,9 +23,14 @@ namespace StoreAPI.Controllers
             string type = HttpContext.Request.Query["type"].ToString();
             List<Item> items = new List<Item>(); 
             if(string.IsNullOrWhiteSpace(type))
+            {
                 items = db.Items.ToList();
+            }
             else
-                items = db.Items.Where(_ => string.Compare(_.Type, type, true) == 0 ).ToList();
+            {
+                items = db.Items.Where(_ => string.Compare(_.Type, type, true) == 0).ToList();
+            }
+
             return new OkObjectResult(items);
         }
 
@@ -36,8 +41,7 @@ namespace StoreAPI.Controllers
             Item item = db.Items.FirstOrDefault(_ => _.ItemId == ItemId);
             if (item == null)
                 return new NotFoundResult();
-            else
-                return new OkObjectResult(item);
+            return new OkObjectResult(item);
         }
     }
 }

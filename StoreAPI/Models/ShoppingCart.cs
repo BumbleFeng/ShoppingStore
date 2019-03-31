@@ -21,10 +21,6 @@ namespace StoreAPI.Models
         public int Number { get; set; }
 
         public DateTime AddTime { get; set; }
-
-        public ShoppingCart()
-        {
-        }
     }
 
     public class ShoppingCartMap : IEntityTypeConfiguration<ShoppingCart>

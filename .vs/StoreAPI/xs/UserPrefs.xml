@@ -1,21 +1,13 @@
 ﻿<Properties StartupConfiguration="{9884F12F-11E7-415B-BF37-D2C6CC72E7CE}|Default">
   <MonoDevelop.Ide.ItemProperties.StoreAPI PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StoreAPI/Controllers/UserController.cs">
-    <Files>
-      <File FileName="StoreAPI/Controllers/UserController.cs" Line="357" Column="24" />
-      <File FileName="ShoppingStore/Models/StoreClient.cs" Line="38" Column="68" />
-      <File FileName="StoreAPI/appsettings.json" Line="11" Column="7" />
-      <File FileName="StoreAPI/Controllers/ValuesController.cs" Line="16" Column="10" />
-      <File FileName="StoreAPI/Models/Address.cs" Line="43" Column="17" />
-      <File FileName="StoreAPI/Controllers/ItemController.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="StoreAPI" expanded="True">
             <Node name="StoreAPI" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="UserController.cs" selected="True" />
+                <Node name="ErrorController.cs" selected="True" />
               </Node>
               <Node name="Models" expanded="True" />
             </Node>

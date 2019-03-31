@@ -17,10 +17,6 @@ namespace StoreAPI.Models
         public Item Item { get; set; }
 
         public int Number { get; set; }
-
-        public OrderItem()
-        {
-        }
     }
 
     public class OrderItemMap : IEntityTypeConfiguration<OrderItem>

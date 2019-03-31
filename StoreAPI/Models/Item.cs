@@ -27,9 +27,5 @@ namespace StoreAPI.Models
         public virtual IList<ShoppingCart> ShoppingCarts { get; set; }
         [JsonIgnore]
         public virtual IList<OrderItem> OrderItems { get; set; }
-
-        public Item()
-        {
-        }
     }
 }

@@ -39,10 +39,6 @@ namespace StoreAPI.Models
 
         [JsonIgnore]
         public virtual OrderDetail OrderDetail { get; set; }
-        
-        public Address()
-        {
-        }
     }
 
     public class AddressMap : IEntityTypeConfiguration<Address>

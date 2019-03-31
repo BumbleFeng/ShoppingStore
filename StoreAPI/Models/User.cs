@@ -26,9 +26,5 @@ namespace StoreAPI.Models
         public virtual IList<OrderDetail> OrderDetails { get; set; }
 
         public virtual IList<Payment> Payments { get; set; }
-
-        public User()
-        {
-        }
     }
 }

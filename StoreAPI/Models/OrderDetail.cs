@@ -30,10 +30,6 @@ namespace StoreAPI.Models
         public Payment Payment { get; set; }
 
         public virtual Tracking Tracking { get; set; }
-
-        public OrderDetail()
-        {
-        }
     }
 
     public class OrderDetailMap : IEntityTypeConfiguration<OrderDetail>

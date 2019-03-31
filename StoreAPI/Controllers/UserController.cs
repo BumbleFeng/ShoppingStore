@@ -50,13 +50,10 @@ namespace StoreAPI.Controllers
             {
                 return new ConflictResult();
             }
-            else
-            {
-                user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
-                db.Users.Add(user);
-                db.SaveChanges();
-                return new CreatedResult("id", FindUser(user.Username).UserId); //created
-            }
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+            db.Users.Add(user);
+            db.SaveChanges();
+            return new CreatedResult("id", FindUser(user.Username).UserId); //created
         }
 
         [HttpPost]
@@ -72,10 +69,7 @@ namespace StoreAPI.Controllers
                 string token = RequestToken(user.Username);
                 return new OkObjectResult(token); //created
             }
-            else
-            {
-                return new UnauthorizedResult();
-            }
+            return new UnauthorizedResult();
         }
 
         private string RequestToken(string username)
@@ -340,7 +334,7 @@ namespace StoreAPI.Controllers
             OrderDetail orderDetail = db.OrderDetails.FirstOrDefault(_ => _.OrderId == OrderId);
             if (orderDetail == null)
                 return new NotFoundResult();
-            else if (user == null || orderDetail.UserId != user.UserId)
+            if (user == null || orderDetail.UserId != user.UserId)
                 return new UnauthorizedResult();
             User u = new User
             {
