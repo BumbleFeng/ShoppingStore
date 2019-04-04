@@ -1,9 +1,5 @@
 {
   "variables": {
-    "azure_ad_tenant_id": "ad082942-7271-4a26-9a4e-57f03a8847ba",
-    "azure_subscription_id": "f8e73325-bd05-48f1-86fd-cb5e25f02980",
-    "app_id": "b7b56bda-052e-4ee2-be89-a62983e1aa06",
-    "client_secret": "2064cf32-7f2c-4949-899b-55c99126f3b9",
     "resource_group": "Packer-Sitecore",
     "storage_account": "packersitecorestorage",
 	  "image_name": "packer-website-feng-001"
