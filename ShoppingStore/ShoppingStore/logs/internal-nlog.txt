@@ -1,6 +1,0 @@
-2019-04-21 16:25:18.0217 Info Message Template Auto Format enabled
-2019-04-21 16:25:18.0509 Info Loading assembly: NLog.Web.AspNetCore
-2019-04-21 16:25:18.1776 Info Adding target File Target[allfile]
-2019-04-21 16:25:18.1935 Info Adding target File Target[ownFile-web]
-2019-04-21 16:25:18.2074 Info Configured from an XML element in /Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/ShoppingStore/ShoppingStore/bin/Debug/netcoreapp2.2/nlog.config...
-2019-04-21 16:25:18.2344 Info Found 44 configuration items
