@@ -1,7 +1,7 @@
 <!-- category -->
 <div class="sort">
   <div class="w sort1">
-    <a href="#">{{item?.category}}</a>
+    <a routerLink="./">{{item?.category}}</a>
     <span class="s-ico"></span>
     <a routerLink="/category/{{item?.type}}">{{item?.type}}</a>
     <span class="s-ico"></span>
@@ -17,7 +17,7 @@
       <!-- left part: pics -->
       <div class="slide lf">
         <div class="view lf">
-          <img src="../../assets/img/{{item?.image}}" style="display:block">
+          <img src="assets/img/{{item?.image}}" style="display:block">
         </div>
 
       </div>
@@ -95,7 +95,7 @@
         </div>
         <!-- buttons -->
         <div class="btns">
-          <a href="javascript:;" class="btn1 lf">Buy Now</a>
+          <a routerLink="./" class="btn1 lf">Buy Now</a>
           <a (click)="addCart()" class="btn2 lf">
             <i></i>
             <span>Add to Cart</span>

@@ -86,7 +86,7 @@ footer {
   height: 32px;
   margin-right: 15px;
   cursor: pointer;
-  background: url(../../assets/img/2.png) no-repeat;
+  background: url(assets/img/2.png) no-repeat;
   position: relative;
 }
 
@@ -117,7 +117,7 @@ footer {
   left: 50%;
   margin-left: -5px;
   top: -6px;
-  background: url(../../assets/img/1.png) no-repeat 0 -458px;
+  background: url(assets/img/1.png) no-repeat 0 -458px;
 }
 
 .footer-top > ul > li .about-us li.ma1 {
@@ -163,7 +163,7 @@ footer {
 .footer-bottom .yunshu li i {
   display: inline-block;
   margin-right: 15px;
-  background: url(../../assets/img/2.png) no-repeat;
+  background: url(assets/img/2.png) no-repeat;
   width: 51px;
   height: 51px;
   vertical-align: top;

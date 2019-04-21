@@ -33,20 +33,20 @@
   border-radius: 50%;
   top: 50%;
   margin-top: -25px;
-  background: #d0c4af url(../../assets/img/2.png) no-repeat;
+  background: #d0c4af url(assets/img/2.png) no-repeat;
   z-index: 10;
 }
 
 #ad button:hover {
-  background: #B19E7A url(../../assets/img/2.png) no-repeat;
+  background: #B19E7A url(assets/img/2.png) no-repeat;
 }
 
 .big button:hover {
-  background: #B19E7A url(../../assets/img/2.png) no-repeat;
+  background: #B19E7A url(assets/img/2.png) no-repeat;
 }
 
 .show button:hover {
-  background: #B19E7A url(../../assets/img/2.png) no-repeat;
+  background: #B19E7A url(assets/img/2.png) no-repeat;
 }
 
 .big button.prev, .show button.prev {

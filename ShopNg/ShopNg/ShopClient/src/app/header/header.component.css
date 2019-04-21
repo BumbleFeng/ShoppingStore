@@ -13,7 +13,7 @@ header .head-l a {
   color: #b4a078;
   margin-left: 30px;
   padding-left: 26px;
-  background: url(../../assets/img/1.gif) no-repeat left center;
+  background: url(assets/img/1.gif) no-repeat left center;
   text-decoration: underline;
 }
 
@@ -42,7 +42,7 @@ header ul a:hover {
 
 header ul .app a {
   padding-left: 12px;
-  background: url(../../assets/img/2.png) 0 -4136px no-repeat;
+  background: url(assets/img/2.png) 0 -4136px no-repeat;
 }
 
 header ul .ma {
@@ -74,7 +74,7 @@ header ul .ma i {
   height: 6px;
   left: 50%;
   margin-left: -5px;
-  background: url(../../assets/img/1.png) no-repeat 0 -458px;
+  background: url(assets/img/1.png) no-repeat 0 -458px;
 }
 
 /*search*/
@@ -96,7 +96,7 @@ header ul .ma i {
   z-index: 2;
   top: 50px;
   left: 45%;
-  background: url(../../assets/img/tm.png);
+  background: url(assets/img/tm.png);
   background-size: cover;
 }
 
@@ -114,7 +114,7 @@ header ul .ma i {
   cursor: pointer;
   width: 22px;
   height: 22px;
-  background: url(../../assets/img/2.png) 0 -5290px no-repeat;
+  background: url(assets/img/2.png) 0 -5290px no-repeat;
 }
 
 ::-webkit-input-placeholder {
@@ -182,7 +182,7 @@ header ul .ma i {
   margin-right: 5px;
   width: 22px;
   height: 22px;
-  background: url(../../assets/img/2.png) no-repeat 0 -343px;
+  background: url(assets/img/2.png) no-repeat 0 -343px;
 }
 
 .search-right .car i.num {
@@ -194,7 +194,7 @@ header ul .ma i {
   line-height: 20px;
   right: 7px;
   text-align: center;
-  background: url(../../assets/img/2.png) no-repeat 0 -282px;
+  background: url(assets/img/2.png) no-repeat 0 -282px;
 }
 
 /*nav*/
