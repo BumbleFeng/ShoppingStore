@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="shortcut icon" href="~/img/tm.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="~/css/aos.css">
+    <link rel="stylesheet" type="text/css" href="~/css/home.css">
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="w">
+            <div class="head-l lf">
+                <a href="#">EXTRA 20% OFF SALE ITEMS. USE CODE BRAVO.</a>
+            </div>
+            <ul class="rf">
+                @await Component.InvokeAsync("User", new { })
+                <li class="split"></li>
+                <li><a href="/error" class="mr20">Crash Me</a></li>
+                <li class="split"></li>
+                <li class="app">
+                    <a href="#">Download APP</a>
+                    <div class="ma">
+                        <img src="~/img/3.png">
+                        <i></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="top-head">
+        <!-- search -->
+        <div id="search">
+            <div class="w search-center">
+                <a href="#" class="pic"></a>
+                <div class="search-right rf">
+                    <form action="">
+                        <input type="text" class="in1 lf" placeholder="What are you looking for?" />
+                        <input type="submit" class="in2 lf" value="" />
+                        <ul>
+                            <li class="one"><a href="#">top rated</a></li>
+                            <li><a href="#">snacks</a></li>
+                            <li><a href="#">books</a></li>
+                        </ul>
+                    </form>
+                    <a href="#" class="car lf">
+                        <i class="bg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- nav -->
+        <nav>
+            <ul class="tab-nav">
+                <li class="">
+                    <a href="/home">Home</a>
+                </li>
+                <li class="">
+                    <a href="/category">Category</a>
+                </li>
+                <li>
+                    <a href="/category?type=Furniture">Furniture</a>
+                    <div class="nav-down">
+                        <ul class="card-list clear">
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/4.png">
+                                    <p>Pillow</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/5.png">
+                                    <p>Bed</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/6.png">
+                                    <p>Sheet</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/7.png">
+                                    <p>Carpet</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/8.png">
+                                    <p>Carbinet</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/9.png">
+                                    <p>Cushion</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/10.png">
+                                    <p>Decoration</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/11.png">
+                                    <p>Lamp</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/category?type=Kitchen">Kitchen</a>
+                    <div class="nav-down">
+                        <ul class="card-list clear">
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/13.png">
+                                    <p>Pot</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/14.png">
+                                    <p>Server</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/16.png">
+                                    <p>Tableware</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/20.png">
+                                    <p>Dinnerware</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/12.png">
+                                    <p>Cup</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/15.png">
+                                    <p>Kettle</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/18.png">
+                                    <p>Bottle</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/19.png">
+                                    <p>Napkin</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/17.png">
+                                    <p>Appliance</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/category?type=Accessories">Accessories</a>
+                    <div class="nav-down">
+                        <ul class="card-list clear">
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/21.png">
+                                    <p>Luggage</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/22.png">
+                                    <p>Backpack</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/23.png">
+                                    <p>Shoulder Bag</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/24.png">
+                                    <p>Shoes</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/25.png">
+                                    <p>Boots</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/26.png">
+                                    <p>Slippers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/27.png">
+                                    <p>Scarf</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/28.png">
+                                    <p>Belt</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Clothing</a>
+                    <div class="nav-down">
+                        <ul class="card-list clear">
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/30.png">
+                                    <p>Underwear</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/31.png">
+                                    <p>Socks</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/32.png">
+                                    <p>Coat</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/33.png">
+                                    <p>Loungewear</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/34.png">
+                                    <p>Shirt</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/35.png">
+                                    <p>T-shirt</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Food</a>
+                    <div class="nav-down">
+                        <ul class="card-list clear">
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/55.png">
+                                    <p>Pastries</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/56.png">
+                                    <p>Snacks</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/57.png">
+                                    <p>Dried Fruit</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/58.png">
+                                    <p>Nuts</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/59.png">
+                                    <p>Beverage</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/60.png">
+                                    <p>Tea</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="~/img/61.png">
+                                    <p>Vegetable</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    @RenderBody()
+
+
+    <!--  footer -->
+    <footer data-aos="fade-up">
+        <div class="footer-bottom">
+            <ul class="yunshu clear">
+                <li>
+                    <i class="tui2"></i>
+                    <p>Free Shipping</p>
+                </li>
+                <li>
+                    <i class="tui1"></i>
+                    <p>Free Return</p>
+                </li>
+            </ul>
+            <div class="copy w">
+                <a href="#">About Us</a>
+                <b class="split">|</b>
+                <a href="#">Contact Us</a>
+                <b class="split">|</b>
+                <a href="#">Help Center</a>
+                <b class="split">|</b>
+                <a href="#">Careers</a>
+                <p>TM's © 2019</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="~/js/aos.js"></script>
+    <script type="text/javascript" src="~/js/home.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

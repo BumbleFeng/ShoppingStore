@@ -1,0 +1,99 @@
+/*recommendation*/
+#popularity {
+  height: 516px;
+  background: #f4f0ea;
+  padding: 60px 0 20px;
+  min-width: 1090px;
+}
+
+#popularity img {
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+#popularity li:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+#popularity .mood {
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+#popularity .mood li {
+  float: left;
+  font-size: 14px;
+  line-height: 28px;
+  height: 28px;
+  width: 70px;
+  text-align: center;
+  margin-right: 55px;
+  cursor: pointer;
+}
+
+#popularity .mood li.on {
+  border-bottom: 2px solid #b4a078;
+  color: #b4a078;
+}
+
+.content {
+  display: none;
+}
+
+.content1 {
+  width: 390px;
+  height: 430px;
+  background: #fff;
+  position: relative;
+}
+
+.content1:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.content1:hover a {
+  color: #b4a078;
+}
+
+.content-list li:hover a {
+  color: #b4a078;
+}
+
+.content .text {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.content-list {
+  width: 699px;
+}
+
+.content-list li {
+  background: #fff;
+  position: relative;
+  width: 223px;
+  float: left;
+  height: 210px;
+  text-align: center;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.content .color-num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+  color: #a7936e;
+  border: 1px solid #b3a07d;
+  border-radius: 5px;
+  padding: 0 4px;
+  line-height: 18px;
+  z-index: 5;
+}
+/*# sourceMappingURL=recommendation.component.css.map */

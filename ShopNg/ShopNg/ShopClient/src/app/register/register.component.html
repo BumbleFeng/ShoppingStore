@@ -1,0 +1,67 @@
+<!-- register -->
+<div class="m-bdbg">
+  <div class="g-row w clear">
+
+
+    <div class="page">
+      <h3>Register</h3>
+
+      <div class="m-cnt">
+        <form id="login-form" #registerForm="ngForm" (ngSubmit)="register()">
+          <div class="m-container">
+
+
+            <!-- check username -->
+            <div class="validation-alert">
+              <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+                <div *ngIf="username.errors.required">
+                  Username is required.
+                </div>
+                <div *ngIf="username.errors.email">
+                  Username must be valid email address.
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box" id="account-box">
+              <div class="u-logo lf">
+                <div class="u-logo-img1 img"></div>
+              </div>
+              <input type="email" placeholder="username" name="username" class="inputtext" required
+                [(ngModel)]="user.username" #username="ngModel" email>
+            </div>
+
+
+
+            <!-- check password -->
+            <div class="validation-alert">
+              <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                <div *ngIf="password.errors.required">
+                  Password is required.
+                </div>
+                <div *ngIf="password.errors.minlength">
+                  Password must be at least 8 characters long.
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box" id="sub-box">
+              <div class="u-logo lf">
+                <div class="u-logo-img2 img"></div>
+              </div>
+              <input type="password" placeholder="password" name="password" class="inputtext" required minlength="8"
+                [(ngModel)]="user.password" #password="ngModel">
+            </div>
+
+
+
+            <button class="loginbox" type="submit" [disabled]="!registerForm.form.valid">Register</button>
+            <div class="un-login">
+              <a routerLink="/login" class="rf">login</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

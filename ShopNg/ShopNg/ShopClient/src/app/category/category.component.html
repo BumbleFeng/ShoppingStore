@@ -1,0 +1,38 @@
+<!-- category -->
+<div class="w clear category-bg">
+  <div class="category-wrap">
+
+    <aside class="category-aside lf">
+      <ul class="category-link">
+        <li><a routerLink="/category/All">All</a></li>
+        <hr>
+        <li><a routerLink="/category/Furniture">Furniture</a></li>
+        <hr>
+        <li><a routerLink="/category/Kitchen">Kitchen</a></li>
+        <hr>
+        <li><a routerLink="/category/Accessories">Accessories</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <ul class="w clear category-list lf">
+          <li class="lf" *ngFor="let item of items">
+            <a routerLink="/item/{{item.itemId}}">
+              <img src="../../assets/img/{{item.image}}">
+            </a>
+
+            <div class="text">
+              <p><a routerLink="/item/{{item.itemId}}">{{item.name}}</a></p>
+
+              <div class="itemPrice">
+                <span class="lf">{{item.price|currency}}</span>
+                <button class="rf" type="button" (click)="addCart(item.itemId)">Add to Cart</button>
+              </div>
+            </div>
+
+          </li>
+      </ul>
+    </main>
+
+  </div>
+</div>

@@ -1,0 +1,131 @@
+/*brand*/
+#make {
+  margin-top: 20px;
+  min-width: 1090px;
+}
+
+.hd {
+  margin-bottom: 20px;
+}
+
+.hd h3 {
+  float: left;
+  font-size: 28px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.hd span {
+  display: block;
+  padding-top: 13px;
+  font-size: 14px;
+  float: left;
+}
+
+.hd .hd-right {
+  padding-top: 18px;
+  font-size: 14px;
+}
+
+.make-list li {
+  width: 357px;
+  height: 320px;
+  float: left;
+  overflow: hidden;
+  margin-right: 9px;
+  position: relative;
+  text-align: center;
+}
+
+.make-list li a {
+  display: block;
+  width: 100%;
+  color: #666;
+  height: 100%;
+}
+
+.make-list li a img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.make-list li .name {
+  font-size: 24px;
+  margin: 48px 0 19px;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.make-list li .name span {
+  display: inline-block;
+  position: absolute;
+  top: -3px;
+  width: 32px;
+  margin-left: 2px;
+  height: 21px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background: url(../../assets/img/69.png) no-repeat;
+}
+
+.make-list li .pirce {
+  display: inline-block;
+  padding-top: 17px;
+  width: auto;
+  position: relative;
+  z-index: 3;
+  font-size: 14px;
+  border-top: 1px solid #666;
+}
+
+.make-list li.last {
+  margin: 0;
+}
+
+.make-list li.last .ban {
+  width: 357px;
+  height: 155px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.make-list li.last .ban1 {
+  width: 357px;
+  height: 155px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.make-list li.last img {
+  width: 357px;
+  height: 155px;
+}
+
+.make-list li.last .name {
+  text-align: left;
+  margin: 32px 0 10px 20px;
+  font-size: 20px;
+}
+
+.make-list li.last .pirce {
+  float: left;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.make-list li a:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+/*# sourceMappingURL=brand.component.css.map */

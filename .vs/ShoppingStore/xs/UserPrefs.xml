@@ -1,22 +1,20 @@
 ﻿<Properties StartupConfiguration="{D85E7246-65D7-41AA-BFEF-896B139C354F}|Default">
   <MonoDevelop.Ide.ItemProperties.ShoppingStore PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShoppingStore/Views/OrderDetail/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShopNg/Controllers/ValuesController.cs">
     <Files>
-      <File FileName="ShoppingStore/Views/OrderDetail/Index.cshtml" Line="16" Column="33" />
-      <File FileName="ShoppingStore/Controllers/OrderDetailController.cs" Line="113" Column="14" />
+      <File FileName="ShopNg/Startup.cs" Line="1" Column="17" />
+      <File FileName="ShopNg/Program.cs" Line="5" Column="2" />
+      <File FileName="ShopNg/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="ShopNg/Controllers/ValuesController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
+          <Node name="ShopNg" expanded="True">
+            <Node name="ShopNg" expanded="True" />
+          </Node>
           <Node name="ShoppingStore" expanded="True">
-            <Node name="ShoppingStore" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="OrderDetail" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
-              </Node>
-            </Node>
+            <Node name="ShoppingStore" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>

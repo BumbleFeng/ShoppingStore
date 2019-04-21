@@ -1,0 +1,35 @@
+<!-- list my orders -->
+<div class="orderlist-bg">
+    <div class="clear orderlist-wrapper">
+        <!-- orders title -->
+        <div class="hd clear">
+            <div class="hd-left lf">
+                <h3>My Orders</h3>
+            </div>
+        </div>
+        
+        <div *ngIf="!orders.length; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <div class="hd clear">You have no orders yet.</div>
+        </ng-template>
+
+        <ng-template #elseBlock>
+            <ul class="orderlist">
+                <li class="order-item clear">
+                    <strong class="order-item-info">Order ID</strong>
+                    <strong class="order-item-info">Order Date</strong>
+                    <strong class="order-item-info">Status</strong>
+                    <strong class="order-item-info">Total</strong>
+                </li>
+
+                <li *ngFor="let order of orders" class="order-item clear">
+                    <div class="order-item-info"><a routerLink="/orderDetail/{{order.orderId}}">{{order.orderId}}</a>
+                    </div>
+                    <div class="order-item-info">{{order.placedTime|date:'yyyy-MM-dd hh:mm'}}</div>
+                    <div class="order-item-info">{{order.staus}}</div>
+                    <div class="order-item-info">{{order.total|currency}}</div>
+                </li>
+            </ul>
+        </ng-template>
+    </div>
+</div>

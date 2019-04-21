@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #fff;
+    font-family:"Microsoft Yahei","微软雅黑",verdana;
+    font-size: 12px;
+}
+
+h1,h2,h3,h4,h5,h6,dd,dt,dl,input,p,ul,li,img,strong,table,td,tr,ol{
+	margin:0px;
+	padding:0px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.lf{float: left;}
+
+.rf{float: right;}
+
+.clear:after{
+    content:"";
+    clear: both;
+    display:block;
+}
+ 
+a{ 
+    color:#333;
+    text-decoration: none;
+}
+
+.clear:after{
+    content:"";
+    clear: both;
+    display:block;
+}
+
+input,button{border:none;outline: none;}
+li{list-style: none;}
+img{vertical-align: middle;}
+
+.w{
+    width: 1090px;
+    margin: 0 auto;
+}
+
+.mr20{
+    margin-right: 20px;
+}
+
+.mr10{
+    margin-right: 10px;
+}
+
+.ml10{
+    margin-left: 10px;
+}
+
+.pl10{
+    padding-left: 10px;
+}
+
+.mt10{
+    margin-top: 10px;
+}
+
+.mt50{
+    margin-top: 50px;
+}

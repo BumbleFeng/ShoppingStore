@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="ShoppintStoreAPI" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^/Users/BumbleBee/Documents/csye/Info6250/ShoppingStore/StoreAPI/obj/Release/netcoreapp2\.2/PubTmp/Out/$" />
-  </parameter>
-</parameters>

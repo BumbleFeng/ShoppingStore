@@ -1,0 +1,105 @@
+<!-- order details -->
+<div class="orderdetail-bg">
+  <div class="clear orderdetail-wrapper">
+    <!-- left part -->
+    <main class="clear orderdetail">
+
+      <!-- order infomation title -->
+      <div class="hd clear">
+        <div class="hd-left lf">
+          <h3>Order Information</h3>
+        </div>
+      </div>
+      <!-- order info -->
+      <div>
+        <p>Order ID : <span>{{order.orderId}}</span></p>
+        <p>Order Date : <span>{{order.placedTime|date:'yyyy-MM-dd hh:mm'}}</span></p>
+        <p>Order Status : <span>{{order.staus}}</span></p>
+      </div>
+      <hr>
+
+      <!-- shipping title -->
+      <div class="hd clear">
+        <div class="hd-left lf">
+          <h3>Shipping address</h3>
+        </div>
+      </div>
+      <!-- shipping info -->
+      <div>
+        <p>{{order.shippingAddress.firstName}} {{order.shippingAddress.lastName}}</p>
+        <p>{{order.shippingAddress.address1}} {{order.shippingAddress.address2}}</p>
+        <p>{{order.shippingAddress.city}}, {{order.shippingAddress.state}}</p>
+        <p>{{order.shippingAddress.zip}}</p>
+      </div>
+      <hr>
+
+      <!-- billing title -->
+      <div class="hd clear">
+        <div class="hd-left lf">
+          <h3>Billing address</h3>
+        </div>
+      </div>
+      <!-- billing info -->
+      <div>
+        <p>{{order.payment.billingAddress.firstName}} {{order.payment.billingAddress.lastName}}</p>
+        <p>{{order.payment.billingAddress.address1}} {{order.payment.billingAddress.address2}}</p>
+        <p>{{order.payment.billingAddress.city}}, {{order.payment.billingAddress.state}}</p>
+        <p>{{order.payment.billingAddress.zip}}</p>
+      </div>
+      <hr>
+
+      <!-- payment title-->
+      <div class="hd clear">
+        <div class="hd-left lf">
+          <h3>Payment</h3>
+        </div>
+      </div>
+      <!-- payment info -->
+      <div>
+        <p>{{order.payment.cardType}}</p>
+        <p>**** **** **** {{order.payment.cardNumber}}</p>
+        <p>{{order.payment.cardType}}</p>
+        <p>Exp: {{order.payment.expiration}}</p>
+        <p>Amount: {{order.total|currency}}</p>
+      </div>
+
+      <hr>
+      <a class="BackBtn" routerLink="/orders">Back</a>
+    </main>
+
+    <!-- right part -->
+    <aside class="orderlist-wrapper">
+      <!-- order title -->
+      <div class="w hd clear">
+        <div class="hd-left lf">
+          <h3>Order Items</h3>
+        </div>
+      </div>
+
+      <ul>
+
+        <li class="order-item clear" *ngFor="let item of order.orderItems">
+          <div class="order-item-name lf">
+            <h6>{{item.item.name}}</h6>
+            <small>x {{item.number}}</small>
+          </div>
+          <div class="order-item-price rf">{{item.item.price|currency}}</div>
+        </li>
+
+        <li class="order-item clear">
+          <div class="order-item-name lf">
+            <h6>Discount</h6>
+          </div>
+          <strong class="order-item-price rf">{{discount|currency}}</strong>
+        </li>
+
+        <li class="order-item clear">
+          <div class="order-item-name lf">
+            <h6>Total</h6>
+          </div>
+          <strong class="order-item-price rf">{{order.total|currency}}</strong>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</div>

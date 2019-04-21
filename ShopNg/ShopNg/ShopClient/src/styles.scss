@@ -1,0 +1,287 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+	margin: 0;
+	padding: 0;
+  color: #333;
+  background: #fff;
+  font-family:"Microsoft Yahei","微软雅黑",verdana;
+  font-size: 12px;
+}
+
+h1,h2,h3,h4,h5,h6,dd,dt,dl,input,p,ul,li,img,strong,table,td,tr,ol{
+	margin:0px;
+	padding:0px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-size: 100%;
+  font-weight: normal;
+}
+
+.lf{float: left;}
+
+.rf{float: right;}
+
+.clear:after{
+  content:"";
+  clear: both;
+  display:block;
+}
+
+a{ 
+  color:#333;
+  text-decoration: none;
+}
+a:hover,button:hover{
+	cursor: pointer;
+}
+
+.clear:after{
+  content:"";
+  clear: both;
+  display:block;
+}
+
+input,button{border:none;outline: none;}
+li{list-style: none;}
+img{vertical-align: middle;}
+
+.w{
+  width: 1090px;
+  margin: 0 auto;
+}
+
+.mr20{
+  margin-right: 20px;
+}
+
+.mr10{
+  margin-right: 10px;
+}
+
+.ml10{
+  margin-left: 10px;
+}
+
+.pl10{
+  padding-left: 10px;
+}
+
+.mt10{
+  margin-top: 10px;
+}
+
+.mt50{
+  margin-top: 50px;
+}
+
+/* component hd */
+.hd{
+  margin-bottom: 20px;
+}
+
+.hd h3{
+  float: left;
+  font-size: 28px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.hd span{
+  display: block;
+  padding-top: 13px;
+  font-size: 14px;
+  float: left;
+}
+
+.hd .hd-right{
+  padding-top: 18px;
+  font-size: 14px;
+}
+
+// login/register part
+.m-bdbg{
+	height: 600px;
+	width: 100%;
+	background: url(./assets/img/115.jpg)no-repeat center;
+	min-width: 1090px;
+}
+
+.m-bdbg .page{
+	margin-top: 83px;
+	width: 304px;
+	float: right;
+	padding: 0 40px;
+	border: 1px solid #e8e8e8;
+	background: #fff;
+	min-height: 460px;
+}
+
+.page h3{
+	padding: 30px 0;
+	padding-left: 40px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #333;
+}
+
+.m-cnt .input-box{
+	width: 100%;
+	height: 36px;
+	border: 1px solid #e8e8e8;
+	line-height: 36px;
+	border-radius: 2px;
+	background: #fff;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.inputtext::-webkit-input-placeholder{
+  color: #ccc;
+  font-weight: normal;
+}
+
+.input-box .u-logo{
+	width: 29px;
+	text-align: center;
+	padding: 7px 0 7px 7px;
+	height: 14px;
+}
+
+.input-box .u-logo .img{
+   display: inline-block;
+   width: 21px;
+   height: 24px;
+   padding-right: 7px;
+   border-right: 1px solid #e8e8e8;
+}
+
+.input-box .u-logo .u-logo-img1{
+	background: url(./assets/img/130.png) no-repeat;
+}
+
+.input-box .u-logo .u-logo-img2{
+	background: url(./assets/img/131.png) no-repeat;
+}
+
+.input-box input{
+	display: block;
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 8px;
+	width: 210px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.m-cnt .loginbox{
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	background: #b4a078;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.m-cnt .loginbox:disabled{
+	background: #dddddd;
+}
+
+.m-cnt .un-login{
+	padding: 2px 0 9px 0;
+	height: 16px;
+	line-height: 16px;
+}
+
+.m-cnt .un-login a{
+	display: block;
+	color: #999;
+}
+
+.m-cnt .outher{
+	position: relative;
+	height: 26px;
+	line-height: 26px;
+}
+
+.m-cnt .outher .line{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	background: #ddd;
+	height: 0.5px;
+	z-index: 0;
+}
+
+.m-cnt .outher .text{
+	position: absolute;
+	width: 120px;
+	text-align: center;
+	background: #fff;
+	left: 50%;
+	margin-left: -60px;
+	z-index: 2;
+	height: 100%;
+	color: #999;
+	font-size: 14px;
+}
+
+.m-cnt .olist{
+	padding-top: 30px;
+	height: 50px;
+	text-align: center;
+}
+
+.m-cnt .olist li{
+	display: inline-block;
+	width: 30px;
+	padding: 0 22px 0;
+	text-align: center;
+}
+
+.m-cnt .olist li i{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+    background: url(./assets/img/132.png) no-repeat;
+}
+
+.m-cnt .olist li i.qq{
+	background-position: -76px 0;
+}
+
+.m-cnt .olist li:hover a{
+	color: #AB925E;
+}
+
+.m-cnt .olist li:hover .weixin{
+	background-position: 0 -32px;
+}
+
+.m-cnt .olist li:hover .qq{
+	background-position: -76px -32px;
+}
+
+.m-cnt .olist li:hover .weibo{
+	background-position: -146px -32px;
+}
+
+.m-cnt .olist li i.weibo{
+	background-position: -146px 0;
+}
+
+
+
+// form validation
+.validation-alert{
+	width: 100%;
+	height: 16px;
+	color: red;
+}

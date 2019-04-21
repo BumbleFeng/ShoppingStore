@@ -1,0 +1,84 @@
+<!-- login -->
+<div class="m-bdbg">
+  <div class="g-row w clear">
+    <div class="page">
+      <h3>Login</h3>
+      <div class="m-cnt">
+        <form id="login-form" #loginForm="ngForm" (ngSubmit)="login()">
+          <div class="m-container">
+
+
+            <div class="validation-alert">
+              <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+                <div *ngIf="username.errors.required">
+                  Username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box" id="account-box">
+              <div class="u-logo lf">
+                <div class="u-logo-img1 img"></div>
+              </div>
+              <input type="text" placeholder="username" name="username" class="inputtext" required
+                [(ngModel)]="user.username" #username="ngModel">
+            </div>
+
+
+
+            <div class="validation-alert">
+              <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                <div *ngIf="password.errors.required">
+                  Password is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box" id="sub-box">
+              <div class="u-logo lf">
+                <div class="u-logo-img2 img"></div>
+              </div>
+              <input type="password" placeholder="password" name="password" class="inputtext" required
+                [(ngModel)]="user.password" #password="ngModel">
+            </div>
+
+
+
+            <button class="loginbox" type="submit" [disabled]="!loginForm.form.valid">Login</button>
+
+            <div class="un-login">
+              <a href="#" class="lf">forget password?</a>
+              <a routerLink="/register" class="rf">register</a>
+            </div>
+            <div class="outher">
+              <div class="line"></div>
+              <div class="text">OR login by</div>
+            </div>
+            <div class="olist">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="weixin"></i>
+                    <span>WeChat</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="qq"></i>
+                    <span>QQ</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="weibo"></i>
+                    <span>Sina</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

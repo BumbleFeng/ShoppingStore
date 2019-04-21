@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{9884F12F-11E7-415B-BF37-D2C6CC72E7CE}|Default">
   <MonoDevelop.Ide.ItemProperties.StoreAPI PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="StoreAPI/.gitignore">
+    <Files>
+      <File FileName="StoreAPI/.gitignore" Line="22" Column="4" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
+          <Node name="ShopNg" expanded="True">
+            <Node name="ShopNg" expanded="True" selected="True" />
+          </Node>
           <Node name="StoreAPI" expanded="True">
-            <Node name="StoreAPI" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="ErrorController.cs" selected="True" />
-              </Node>
-              <Node name="Models" expanded="True" />
-            </Node>
+            <Node name="StoreAPI" expanded="True" />
           </Node>
         </State>
       </Pad>

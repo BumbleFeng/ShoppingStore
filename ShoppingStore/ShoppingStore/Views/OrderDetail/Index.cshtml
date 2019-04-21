@@ -1,0 +1,122 @@
+﻿@model ShoppingStore.Models.OrderDetail
+@{
+    ViewData["Title"] = "Order Detail";
+    var ship = Model.ShippingAddress;
+    var pay = Model.Payment;
+    var bill = pay.BillingAddress;
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/orderdetail.css">
+}
+
+<!-- order details -->
+<div class="orderdetail-bg">
+    <div class="clear orderdetail-wrapper">
+        <!-- left part -->
+        <main class="clear orderdetail">
+
+            <!-- order infomation title -->
+            <div class="hd clear">
+                <div class="hd-left lf">
+                    <h3>Order Information</h3>
+                </div>
+            </div>
+            <!-- order info -->
+            <div>
+                <p>Order ID : <span>@Model.OrderId</span></p>
+                <p>Order Date : <time datetime ="@Model.PlacedTime.ToString("s")"></time></p>
+                <p>Order Status : <span>@Model.Staus</span></p>
+            </div>
+            <hr>
+
+            <!-- shipping title -->
+            <div class="hd clear">
+                <div class="hd-left lf">
+                    <h3>Shipping address</h3>
+                </div>
+            </div>
+            <!-- shipping info -->
+            <div>
+                <p>@ship.FirstName @ship.LastName</p>
+                <p>@ship.Address1 @ship.Address2</p>
+                <p>@ship.City, @ship.State</p>
+                <p>@ship.Zip</p>
+            </div>
+            <hr>
+
+            <!-- billing title -->
+            <div class="hd clear">
+                <div class="hd-left lf">
+                    <h3>Billing address</h3>
+                </div>
+            </div>
+            <!-- billing info -->
+            <div>
+                <p>@bill.FirstName @bill.LastName</p>
+                <p>@bill.Address1 @bill.Address2</p>
+                <p>@bill.City, @bill.State</p>
+                <p>@bill.Zip</p>
+            </div>
+            <hr>
+
+            <!-- payment title-->
+            <div class="hd clear">
+                <div class="hd-left lf">
+                    <h3>Payment</h3>
+                </div>
+            </div>
+            <!-- payment info -->
+            <div>
+                <p>@pay.CardType</p>
+                <p>**** **** **** @pay.CardNumber</p>
+                <p>@pay.NameOnCard</p>
+                <p>Exp. @pay.Exp()</p>
+                <p>Amount: $@Model.Total</p>
+            </div>
+
+            <hr>
+            <button class="BackBtn" onclick="location='/OrderList'">Back</button>
+        </main>
+
+        <!-- right part -->
+        <aside class="orderlist-wrapper">
+            <!-- order title -->
+            <div class="w hd clear">
+                <div class="hd-left lf">
+                    <h3>Order Items</h3>
+                </div>
+            </div>
+
+            <ul>
+                @foreach (var item in Model.OrderItems)
+                {
+                    <li class="order-item clear">
+                        <div class="order-item-name lf">
+                            <h6>@item.Item.Name</h6>
+                            <small>x @item.Number</small>
+                        </div>
+                        <div class="order-item-price rf">$@item.Item.Price</div>
+                    </li>
+                }
+                <li class="order-item clear">
+                    <div class="order-item-name lf">
+                        <h6>Total</h6>
+                    </div>
+                    <strong class="order-item-price rf">$@Model.Total</strong>
+                </li>
+            </ul>
+        </aside>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript" src="~/js/moment.js"></script>
+    <script type="text/javascript" src="~/js/moment-timezone-with-data.js"></script>
+    <script>
+        $(document).ready(function() {
+             $("time").text(function() {
+                var utcTime = $(this).attr("datetime");
+                return moment.utc(utcTime).local().format('YYYY-MM-DD HH:mm');
+             })
+        });
+    </script>
+}

@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{E02C65BF-5971-4FF4-85C3-0AB85EF55D96}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ShopNg/Controllers/ValuesController.cs">
+    <Files>
+      <File FileName="ShopNg/Startup.cs" Line="1" Column="17" />
+      <File FileName="ShopNg/Program.cs" Line="5" Column="2" />
+      <File FileName="ShopNg/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="ShopNg/Controllers/ValuesController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ShopNg" expanded="True">
+            <Node name="ShopNg" expanded="True" />
+          </Node>
+          <Node name="ShoppingStore" expanded="True">
+            <Node name="ShoppingStore" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ShopNg PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

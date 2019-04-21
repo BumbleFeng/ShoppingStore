@@ -1,0 +1,50 @@
+{
+  "variables": {
+    "resource_group": "Packer-Sitecore",
+    "storage_account": "packersitecorestorage",
+	  "image_name": "packer-website-feng-001"
+  },
+  "builders": [
+    {
+      "type": "azure-arm",
+      "subscription_id": "{{user `azure_subscription_id`}}",
+      "tenant_id": "{{user `azure_ad_tenant_id`}}",
+      "client_id": "{{user `app_id`}}",
+      "client_secret": "{{user `client_secret`}}",
+      "cloud_environment_name": "Public",
+      "location": "East US",
+	  
+      "vm_size": "Standard_DS2_v2",
+	  
+	    "managed_image_name": "{{user `image_name`}}",
+	    "managed_image_resource_group_name": "{{user `resource_group`}}",
+	  
+      "os_type": "Windows",
+      "image_publisher": "MicrosoftWindowsServer",
+      "image_offer": "WindowsServer",
+      "image_sku": "2016-Datacenter",
+      "image_version": "latest",
+	  
+      "communicator": "winrm",
+      "winrm_use_ssl": "true",
+      "winrm_insecure": "true",
+      "winrm_timeout": "3m",
+      "winrm_username": "packer"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "./Website.zip",
+      "destination": "c:/temp/Website.zip"
+    },
+    {
+      "type": "powershell",
+      "scripts": [
+        "./install-feature.ps1",
+        "./configure-website.ps1",
+		    "./generalize.ps1"
+      ]
+    }
+  ]
+}

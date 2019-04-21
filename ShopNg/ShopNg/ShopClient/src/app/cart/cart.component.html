@@ -1,0 +1,72 @@
+<!-- cart -->
+<div class="cart-bg">
+  <!-- cart title -->
+  <div class="w hd clear">
+    <div class="hd-left lf">
+      <h3>Shopping Cart</h3>
+    </div>
+  </div>
+
+  <div *ngIf="!shoppingCarts.length; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <div class="w hd clear">You have no items in your Shopping Cart.</div>
+  </ng-template>
+  <ng-template #elseBlock>
+
+    <!-- cart wrap -->
+    <div class="cart-wrap">
+      <table class="w clear cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <td>Title</td>
+            <td>Unit Price</td>
+            <td>Amount</td>
+            <td>Edit</td>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let cart of shoppingCarts">
+            <th>
+              <img src="../../assets/img/{{cart.item.image}}" class="item-img">
+            </th>
+            <td> <a routerLink="/item/{{cart.item.itemId}}">{{cart.item.name}}</a></td>
+            <td>{{cart.item.price|currency}}</td>
+            <td>
+              <!-- amount -->
+              <div class="number clear">
+                <div class="selnum lf">
+                  <span class="remove" (click)="remove(cart.itemId)">
+                    <i class="hx"></i>
+                  </span>
+                  <input type="text" [(ngModel)]="cart.number">
+                  <span class="add" (click)="add(cart.itemId)">
+                    <i class="hx"></i>
+                    <i class="sx"></i>
+                  </span>
+                </div>
+              </div>
+            </td>
+            <td>
+              <button class="deleteBtn" (click)="delete(cart.itemId)">Delete</button>
+            </td>
+          </tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="2">Total</th>
+            <td colspan="3">{{total|currency}}</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="w hd">
+        <form action="Checkout" method="Get">
+          <a routerLink="/checkout" class="checkoutBtn">Checkout</a>
+        </form>
+      </div>
+    </div>
+  </ng-template>
+</div>

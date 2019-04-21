@@ -1,0 +1,285 @@
+/*header*/
+header{
+  height: 36px;
+  background: #333;
+  color: #ccc;
+  line-height: 36px;
+  min-width: 1090px;
+}
+
+header .head-l a{
+  display: block;
+  float: left;
+  color: #b4a078;
+  margin-left: 30px;
+  padding-left:26px;
+  background: url(../../assets/img/1.gif) no-repeat left center;
+  text-decoration: underline;
+}
+
+header .head-l a:hover{
+  text-decoration: none;
+}
+
+header ul li{
+  position: relative;
+  float: left;
+}
+
+header ul li.split{
+  height: 16px;
+  margin: 10px 10px 10px 0;
+  border-left: 1px solid #5c5c5c;
+}
+
+header ul a{
+  color: #ccc;
+}
+
+header ul a:hover{
+  color: #fff;
+}
+
+header ul .app a{
+  padding-left: 12px;
+  background: url(../../assets/img/2.png)0 -4136px no-repeat;
+}
+
+header ul .ma{
+  position: relative;
+  position: absolute;
+  width: 139px;
+  text-align: center;
+  left: -58px;
+  top: 31px;
+  background: #fff;
+  z-index: 99;
+  padding: 5px 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+  display: none;
+}
+
+header ul .ma img{
+  width: 117px;
+  height: 135px;
+}
+
+header ul .ma i{
+  position: absolute;
+  display: block;
+  top: -6px;
+  width: 10px;
+  height: 6px;
+  left: 50%;
+  margin-left: -5px;
+  background: url(../../assets/img/1.png) no-repeat 0 -458px;
+}
+
+/*search*/
+#search{
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 13px;
+  min-width: 1090px;
+}
+
+.search-center{
+  height: 32px;
+}
+
+#search .pic{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  top: 50px;
+  left: 45%;
+  background: url(../../assets/img/tm.png);
+  background-size: cover;
+}
+
+.search-right .in1{
+  border-bottom: 1px solid #d8cebc;
+  line-height: 23px;
+  width: 252px;
+  margin-top: 9px;
+  height: 23px;
+  font-size: 12px;
+}
+
+.search-right .in2{
+  margin-top: 9px;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  background: url(../../assets/img/2.png)0 -5290px no-repeat;
+}
+
+::-webkit-input-placeholder{
+  color: #d8cebc;
+  font-weight: bold;
+}
+
+.search-right form{
+  position: relative;
+  float: left;
+}
+
+.search-right form ul{
+  position: absolute;
+  top: 31px;
+  left:0;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  font-size: 14px;
+  z-index: 110;
+  display: none;
+}
+
+.search-right form ul li a{
+  display: block;
+  width: 242px;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.search-right form ul li.one{
+  margin-top: 5px;
+}
+
+.search-right form ul li.one a{
+  color: #999;
+}
+
+.search-right form ul li.on:hover{
+  background: #F8F5F0;
+}
+
+.search-right form ul li.on:hover a{
+  color: #CABB9E;
+}
+
+.search-right .car{
+  display: block;
+  width: 43px;
+  height: 31px;
+  padding-left: 20px;
+  font-size: 14px;
+  position: relative;
+}
+
+.search-right .car i{
+  display: inline-block;
+}
+
+.search-right .car i.bg{
+  margin-top: 9px;
+  margin-right: 5px;
+  width: 22px;
+  height: 22px;
+  background: url(../../assets/img/2.png)no-repeat 0 -343px;
+}
+
+.search-right .car i.num{
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  color: #fff;
+  font-style: normal;
+  line-height: 20px;
+  right: 7px;
+  text-align: center;
+  background: url(../../assets/img/2.png)no-repeat 0 -282px;
+}
+
+/*nav*/
+#top-head{
+  box-shadow: 0 0 3px 1px rgba(51,51,51,.1);
+  padding-bottom: 20px;
+  min-width: 1090px;
+}
+
+nav{
+  margin-top: 43px;
+  position: relative;
+  text-align: center;
+}
+
+nav .tab-nav{
+  height: 30px;
+  line-height: 1;
+  margin: 0 auto;
+  width: 1090px;
+}
+
+nav .tab-nav>li{
+  display: inline-block;
+  padding: 6px 30px 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+nav .tab-nav li.line{
+  padding: 0;
+  border-left: 1px solid #ccc;
+  height: 20px;
+  margin-top: 3px;
+
+}
+
+nav .tab-nav>li>a{
+  display: block;
+  padding-bottom: 6px;
+}
+
+nav .tab-nav>li.on>a{
+  color: #b4a078;
+  border-bottom:3px solid #b4a078; 
+}
+
+nav .nav-down a:hover{
+  color: #b4a078;
+}
+
+nav .nav-down{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 29px;
+  padding: 30px 0;
+  background: #fff;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,.2);
+  transition:all .4s;
+  z-index: 100;
+}
+
+nav .tab-nav>li:hover>.nav-down{
+  visibility: visible;
+  transition:all .6s;
+  opacity: 1;
+}
+
+.card-list{
+  display: inline-block;
+}
+
+nav .nav-down li{
+  float: left;
+  margin: 0 40px;
+  vertical-align: middle;
+}
+
+nav .nav-down li img{
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  vertical-align: middle;
+}

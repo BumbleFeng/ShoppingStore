@@ -1,0 +1,206 @@
+/*sale*/
+#time .time-list {
+  height: 377px;
+  min-width: 1090px;
+}
+
+.time-list .time1 {
+  width: 224px;
+  height: 317px;
+  padding-top: 60px;
+  float: left;
+  text-align: center;
+  color: #615548;
+  background: url(../../assets/img/31.jpg) no-repeat;
+  position: relative;
+}
+
+.time-list .time1 a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.time1 .screenHd {
+  height: 36px;
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 11px;
+}
+
+.time1 .line {
+  width: 20px;
+  height: 2px;
+  margin: 0 auto 18px;
+  background: #61594b;
+}
+
+.time1 .screenend {
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 22px;
+  height: 22px;
+}
+
+.time1 .endtime {
+  height: 40px;
+  margin-bottom: 50px;
+  /*line-height: 40px;*/
+}
+
+.time1 .endtime span {
+  line-height: 40px;
+  display: inline-block;
+}
+
+.time1 .endtime span.hh {
+  width: 40px;
+  color: #fff;
+  height: 40px;
+  font-size: 18px;
+  background: #615548;
+  border-radius: 2px;
+}
+
+.time1 .look-btn {
+  width: 110px;
+  height: 30px;
+  margin: 0 auto;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  background: #a7936e;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.time2 li {
+  float: left;
+  width: 432px;
+  height: 187px;
+  border: 1px solid #f0ece4;
+  border-left: none;
+  overflow: hidden;
+}
+
+.time2 li img {
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.time2 li:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.time2 li.no {
+  border-top: none;
+}
+
+.time2-right {
+  padding-top: 14px;
+  width: 252px;
+}
+
+.time2-right h2 {
+  height: 26px;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.time2-right h2 a {
+  color: #666;
+}
+
+.time2-right h2 a:hover {
+  color: #b4a078;
+}
+
+.time2-right p {
+  height: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.time2-right .itemnum {
+  padding: 14px 0 8px;
+  height: 14px;
+}
+
+.time2-right .itemnum .numbar {
+  position: relative;
+  width: 152px;
+  height: 10px;
+  margin: 2px 0;
+  border: 1px solid #f2cecd;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.time2-right .itemnum .has {
+  background: #f2cecd;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: -3px;
+}
+
+.time2-right .itemnum .numtip {
+  float: left;
+  height: 14px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #999;
+  margin-left: 5px;
+}
+
+.time2-right .aprice {
+  font-size: 14px;
+}
+
+.time2-right .aprice .yanse {
+  color: #be4141;
+}
+
+.time2-right .aprice .yanse b {
+  font-size: 24px;
+  font-weight: 700;
+  vertical-align: sub;
+}
+
+.time2-right .aprice .item {
+  color: #999;
+  padding-left: 20px;
+}
+
+.time2-right .btn {
+  display: block;
+  color: #fff;
+  background: #be4141;
+  width: 118px;
+  height: 31px;
+  margin-top: 10px;
+  line-height: 31px;
+  text-align: center;
+  font-size: 16px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.time2-right .btn:hover {
+  background: #da4f4f;
+}
+/*# sourceMappingURL=sale.component.css.map */

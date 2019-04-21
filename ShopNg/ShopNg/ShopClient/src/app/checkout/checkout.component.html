@@ -1,0 +1,413 @@
+<!-- checkout -->
+<div class="checkout-bg">
+  <div class="clear checkout-wrapper">
+    <!-- left part -->
+    <form class="clear checkout-form-wrapper" #orderForm="ngForm" (ngSubmit)="game()">
+
+      <!-- shipping title -->
+      <div class="hd clear">
+        <div class="hd-left lf">
+          <h3>Shipping address</h3>
+        </div>
+      </div>
+
+      <!-- past address select -->
+      <div *ngIf="user.addresses.length" class="clear address-select-wrapper">
+        <label for="savedAddress">Saved Addresses</label>
+        <select [(ngModel)]="order.shippingAddressId" class="address-select" name="savedAddress" id="savedAddress">
+          <option value="0">--select from saved addresses--</option>
+          <option *ngFor="let address of user.addresses" [value]="address.addressId">({{address.firstName}}
+            {{address.lastName}}) {{address.address1}}, {{address.address2}}, {{address.city}}, {{address.state}}
+            {{address.zip}}</option>
+        </select>
+      </div>
+
+      <!-- shipping input part -->
+      <div *ngIf="order.shippingAddressId==0" class="clear shipping-input-wrapper">
+        <div class="left-input">
+          <label for="shippingFirstname">First Name</label>
+          <span class="validation-alert">
+            <span *ngIf="shippingFirstname.invalid && (shippingFirstname.dirty || shippingFirstname.touched)"
+              class="alert alert-danger">
+              <span *ngIf="shippingFirstname.errors.required">
+                required
+              </span>
+            </span>
+          </span>
+          <input type="text" name="shippingFirstname" id="shippingFirstname" required
+            [(ngModel)]="order.shippingAddress.firstName" #shippingFirstname="ngModel">
+        </div>
+
+
+
+        <div class="right-input">
+          <label for="shippingLastname">Last Name</label>
+          <span class="validation-alert">
+            <span *ngIf="shippingLastname.invalid && (shippingLastname.dirty || shippingLastname.touched)"
+              class="alert alert-danger">
+              <span *ngIf="shippingLastname.errors.required">
+                required
+              </span>
+            </span>
+          </span>
+          <input type="text" name="shippingLastname" id="shippingLastname" required
+            [(ngModel)]="order.shippingAddress.lastName" #shippingLastname="ngModel">
+        </div>
+
+
+
+        <div>
+          <label for="shippingPhone">Phone (Optional)</label>
+          <span class="validation-alert">
+            <span *ngIf="shippingPhone.invalid && (shippingPhone.dirty || shippingPhone.touched)"
+              class="alert alert-danger">
+              <span *ngIf="shippingPhone.errors.pattern">
+                Phone must be 10 or 11 digits.
+              </span>
+            </span>
+          </span>
+          <input type="tel" name="shippingPhone" id="shippingPhone" pattern="[0-9]{10,11}"
+            [(ngModel)]="order.shippingAddress.phone" #shippingPhone="ngModel">
+        </div>
+
+
+
+        <div>
+          <label for="shippingAddress1">Address1</label>
+          <span class="validation-alert">
+            <span *ngIf="shippingAddress1.invalid && (shippingAddress1.dirty || shippingAddress1.touched)"
+              class="alert alert-danger">
+              <span *ngIf="shippingAddress1.errors.required">
+                required
+              </span>
+            </span>
+          </span>
+          <input type="text" name="shippingAddress1" id="shippingAddress1" required
+            [(ngModel)]="order.shippingAddress.address1" #shippingAddress1="ngModel">
+        </div>
+
+
+
+        <div>
+          <label for="shippingAddress2">Address2 (Optional)</label>
+          <input type="text" name="shippingAddress2" id="shippingAddress2" [(ngModel)]="order.shippingAddress.address2">
+        </div>
+
+        <div class="one-third-input">
+          <label for="shippingCity">City</label>
+          <span class="validation-alert">
+            <span *ngIf="shippingCity.invalid && (shippingCity.dirty || shippingCity.touched)"
+              class="alert alert-danger">
+              <span *ngIf="shippingCity.errors.required">
+                required
+              </span>
+            </span>
+          </span>
+          <input type="text" name="shippingCity" id="shippingCity" required [(ngModel)]="order.shippingAddress.city"
+            #shippingCity="ngModel">
+        </div>
+
+
+
+        <div class="one-third-input">
+          <label for="shippingState">State</label>
+          <span class="validation-alert">
+            <span *ngIf="shippingState.invalid && (shippingState.dirty || shippingState.touched)"
+              class="alert alert-danger">
+              <span *ngIf="shippingState.errors.required">
+                required
+              </span>
+            </span>
+          </span>
+          <input type="text" name="shippingState" id="shippingState" required [(ngModel)]="order.shippingAddress.state"
+            #shippingState="ngModel">
+        </div>
+
+
+
+        <div class="one-third-input">
+          <label for="shippingZip">Zip</label>
+          <span class="validation-alert">
+            <span *ngIf="shippingZip.invalid && (shippingZip.dirty || shippingZip.touched)" class="alert alert-danger">
+              <span *ngIf="shippingZip.errors.required">
+                required
+              </span>
+              <span *ngIf="shippingZip.errors.pattern">
+                5 digits
+              </span>
+            </span>
+          </span>
+          <input type="text" name="shippingZip" id="shippingZip" required pattern="[0-9]{5}"
+            [(ngModel)]="order.shippingAddress.zip" #shippingZip="ngModel">
+        </div>
+
+      </div>
+      <hr>
+
+      <!-- payment title-->
+      <div class="hd clear">
+        <div class="hd-left lf">
+          <h3>Payment</h3>
+        </div>
+      </div>
+      <!-- saved card select -->
+      <div *ngIf="user.payments.length" class="clear card-select-wrapper">
+        <label for="savedCards">Saved Payments</label>
+        <select [(ngModel)]="order.paymentId" class="card-select" name="savedCards" id="savedCards">
+          <option value="0">--select from saved cards--</option>
+          <option *ngFor="let payment of user.payments" [value]="payment.paymentId">{{payment.cardType}} ending in
+            {{payment.cardNumber}} (Name: {{payment.nameOnCard}} Exp: {{payment.expiration}})
+          </option>
+        </select>
+      </div>
+
+      <!-- payment wrapper -->
+      <div *ngIf="order.paymentId==0">
+        <div class="clear payment-wrapper">
+          <!-- payment method select -->
+          <div class="clear payment-method-wrapper">
+            <div class="payment-method">
+              <input type="radio" id="visa" name="paymentMethod" value="Visa" [(ngModel)]="order.payment.cardType">
+              <label for="visa">Visa</label>
+            </div>
+            <div class="payment-method">
+              <input type="radio" id="MasterCard" name="paymentMethod" value="MasterCard"
+                [(ngModel)]="order.payment.cardType">
+              <label for="MasterCard">MasterCard</label>
+            </div>
+            <div class="payment-method">
+              <input type="radio" id="Discover" name="paymentMethod" value="Discover"
+                [(ngModel)]="order.payment.cardType">
+              <label for="Discover">Discover</label>
+            </div>
+            <div class="payment-method">
+              <input type="radio" id="ae" name="paymentMethod" value="American Express"
+                [(ngModel)]="order.payment.cardType">
+              <label for="ae">American Express</label>
+            </div>
+          </div>
+          <!-- card info -->
+          <div class="clear payment-input-wrapper">
+            <div>
+              <label for="cardNumber">Card number</label>
+              <span class="validation-alert">
+                <span *ngIf="cardNumber.invalid && (cardNumber.dirty || cardNumber.touched)" class="alert alert-danger">
+                  <span *ngIf="cardNumber.errors.required">
+                    required
+                  </span>
+                  <span *ngIf="cardNumber.errors.pattern">
+                    Card number must be 16 digits.
+                  </span>
+                </span>
+              </span>
+              <input type="text" name="cardNumber" id="cardNumber" required pattern="[0-9]{16}"
+                [(ngModel)]="order.payment.cardNumber" #cardNumber="ngModel">
+            </div>
+
+
+
+
+            <div>
+              <label for="nameOnCard">Name on card</label>
+              <span class="validation-alert">
+                <span *ngIf="nameOnCard.invalid && (nameOnCard.dirty || nameOnCard.touched)" class="alert alert-danger">
+                  <span *ngIf="nameOnCard.errors.required">
+                    required
+                  </span>
+                </span>
+              </span>
+              <input type="text" name="nameOnCard" id="nameOnCard" required [(ngModel)]="order.payment.nameOnCard"
+                #nameOnCard="ngModel">
+            </div>
+
+
+
+
+            <div class="left-input">
+              <label for="expire">Expiration</label>
+              <span class="validation-alert">
+                <span *ngIf="expire.invalid && (expire.dirty || expire.touched)" class="alert alert-danger">
+                  <span *ngIf="expire.errors.required">
+                    required
+                  </span>
+                </span>
+              </span>
+              <input type="month" name="expire" id="expire" required [(ngModel)]="exp" #expire="ngModel">
+            </div>
+
+
+
+            <div class="right-input">
+              <label for="cvv">CVV</label>
+              <span class="validation-alert">
+                <span *ngIf="cvv.invalid && (cvv.dirty || cvv.touched)" class="alert alert-danger">
+                  <span *ngIf="cvv.errors.required">
+                    required
+                  </span>
+                  <span *ngIf="cvv.errors.pattern">
+                    3 digits
+                  </span>
+                </span>
+              </span>
+              <input type="text" name="cvv" id="cvv" required pattern="[0-9]{3}" [(ngModel)]="order.payment.cvv"
+                #cvv="ngModel">
+            </div>
+
+
+
+          </div>
+        </div>
+        <hr>
+
+        <!-- billing title -->
+        <div class="hd clear">
+          <div class="hd-left lf">
+            <h3>Billing address</h3>
+          </div>
+        </div>
+        <!-- billing as shipping checkbox -->
+        <div id="billingCheckBox">
+          <input type="checkbox" id="billingCheck" name="billingAsShipping" [(ngModel)]="same">
+          <label for="billingCheck">Billing address is the same as shipping address</label>
+        </div>
+        <!-- billing input part -->
+        <div *ngIf="!same" class="clear billing-input-wrapper" id="billing" style="display: block;">
+          <div class="left-input">
+            <label for="billingFirstname">First Name</label>
+            <span class="validation-alert">
+              <span *ngIf="billingFirstname.invalid && (billingFirstname.dirty || billingFirstname.touched)"
+                class="alert alert-danger">
+                <span *ngIf="billingFirstname.errors.required">
+                  required
+                </span>
+              </span>
+            </span>
+            <input class="billingInput" type="text" name="billingFirstname" id="billingFirstname" required
+              [(ngModel)]="order.payment.billingAddress.firstName" #billingFirstname="ngModel">
+          </div>
+
+
+
+          <div class="right-input">
+            <label for="billingLastname">Last Name</label>
+            <span class="validation-alert">
+              <span *ngIf="billingLastname.invalid && (billingLastname.dirty || billingLastname.touched)"
+                class="alert alert-danger">
+                <span *ngIf="billingLastname.errors.required">
+                  required
+                </span>
+              </span>
+            </span>
+            <input class="billingInput" type="text" name="billingLastname" id="billingLastname" required
+              [(ngModel)]="order.payment.billingAddress.lastName" #billingLastname="ngModel">
+          </div>
+
+
+
+          <div>
+            <label for="billingAddress1">Address1</label>
+            <span class="validation-alert">
+              <span *ngIf="billingAddress1.invalid && (billingAddress1.dirty || billingAddress1.touched)"
+                class="alert alert-danger">
+                <span *ngIf="billingAddress1.errors.required">
+                  required
+                </span>
+              </span>
+            </span>
+            <input class="billingInput" type="text" name="billingAddress1" id="billingAddress1" required
+              [(ngModel)]="order.payment.billingAddress.address1" #billingAddress1="ngModel">
+          </div>
+
+
+
+
+          <div>
+            <label for="billingAddress2">Address2 (Optional)</label>
+            <input type="text" name="billingAddress2" id="billingAddress2"
+              [(ngModel)]="order.payment.billingAddress.address2">
+          </div>
+          <div class="one-third-input">
+            <label for="billingCity">City</label>
+            <span class="validation-alert">
+              <span *ngIf="billingCity.invalid && (billingCity.dirty || billingCity.touched)"
+                class="alert alert-danger">
+                <span *ngIf="billingCity.errors.required">
+                  required
+                </span>
+              </span>
+            </span>
+            <input class="billingInput" type="text" name="billingCity" id="billingCity" required
+              [(ngModel)]="order.payment.billingAddress.city" #billingCity="ngModel">
+          </div>
+
+
+
+          <div class="one-third-input">
+            <label for="billingState">State</label>
+            <span class="validation-alert">
+
+              <span *ngIf="billingState.invalid && (billingState.dirty || billingState.touched)"
+                class="alert alert-danger">
+                <span *ngIf="billingState.errors.required">
+                  required
+                </span>
+              </span>
+            </span>
+            <input class="billingInput" type="text" name="billingState" id="billingState" required
+              [(ngModel)]="order.payment.billingAddress.state" #billingState="ngModel">
+          </div>
+
+
+          <div class="one-third-input">
+            <label for="billingZip">Zip</label>
+            <span class="validation-alert">
+              <span *ngIf="billingZip.invalid && (billingZip.dirty || billingZip.touched)" class="alert alert-danger">
+                <span *ngIf="billingZip.errors.required">
+                  required
+                </span>
+                <span *ngIf="billingZip.errors.pattern">
+                  5 digits
+                </span>
+              </span>
+            </span>
+            <input class="billingInput" type="text" name="billingZip" id="billingZip" required pattern="[0-9]{5}"
+              [(ngModel)]="order.payment.billingAddress.zip" #billingZip="ngModel">
+          </div>
+
+        </div>
+      </div>
+      <hr>
+
+      <app-game-dialog (promoCode)="getCode($event)" *ngIf="open"></app-game-dialog>
+      <button class="clear placeOrderBtn" type="submit" [disabled]="!orderForm.form.valid">Play a Game and Save More</button>
+    </form>
+
+    <!-- right part -->
+    <aside class="checkout-order-wrapper">
+      <!-- order title -->
+      <div class="w hd clear">
+        <div class="hd-left lf">
+          <h3>Your cart</h3>
+        </div>
+      </div>
+
+      <!-- order items -->
+      <ul>
+        <li class="cart-item clear" *ngFor="let cart of user.shoppingCarts">
+          <div class="cart-item-name lf">
+            <h6>{{cart.item.name}}</h6>
+            <small>x {{cart.number}}</small>
+          </div>
+          <div class="cart-item-price rf">{{cart.item.price|currency}}</div>
+        </li>
+        <li class="cart-item clear">
+          <div class="cart-item-name lf">
+            <h6>Total</h6>
+          </div>
+          <strong class="cart-item-price rf">{{total|currency}}</strong>
+        </li>
+      </ul>
+
+    </aside>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+.cart-bg {
+    min-height: 600px;
+    width: 100%;
+    background: url(../../assets/img/block.jpg) repeat;
+}
+
+.cart-table {
+    background: #fff;
+    font-size: 18px;
+}
+
+.cart-table, th, td {
+    border-bottom: 2px solid #b3a07d;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+    .cart-table thead {
+        background-color: #b4a078;
+        color: white;
+    }
+
+    .cart-table th .item-img {
+        width: 100px;
+        height: 100px;
+    }
+
+.number .selnum {
+    border: 1px solid #ddd;
+}
+
+    .number .selnum span {
+        display: block;
+        float: left;
+        width: 36px;
+        height: 30px;
+        line-height: 28px;
+        background: #fff;
+        position: relative;
+        cursor: pointer;
+    }
+
+        .number .selnum span i.hx {
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            background: #d3d3d3;
+            top: 15px;
+            left: 12px;
+        }
+
+        .number .selnum span i.sx {
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background: #d3d3d3;
+            left: 16px;
+            top: 11px;
+        }
+
+    .number .selnum input {
+        float: left;
+        display: block;
+        width: 60px;
+        border: none;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        color: #333;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+.deleteBtn{
+    color: #b4a078;
+    border: 1px solid #b4a078;
+    background: #f5f3ef;
+    border-radius: 1.5rem;
+}   
+
+.checkoutBtn {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background: #b4a078;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
