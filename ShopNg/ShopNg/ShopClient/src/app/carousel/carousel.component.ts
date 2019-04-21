@@ -17,7 +17,7 @@ export class CarouselComponent implements OnInit {
   carousel() {
     var arr1 = [1, 2, 3, 4, 5];
     $("#ad .list li a").each(function (i) {
-      $(this).css("background", "url(../../assets/img/" + arr1[i] + ".jpg) no-repeat top center");
+      $(this).css("background", "url(assets/img/" + arr1[i] + ".jpg) no-repeat top center");
     })
     var timer;
     var n = 0;
