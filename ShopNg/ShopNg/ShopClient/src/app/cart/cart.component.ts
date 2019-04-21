@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ShoppingCart } from '../shared/models/shoppingcart';
 import { isString } from 'util';
 import { ItemService } from '../shared/services/item.service';
+import { UserService } from '../shared/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -14,13 +16,17 @@ export class CartComponent implements OnInit {
   private errorMessage: string;
   public total: number;
 
-  constructor(private itemService: ItemService) { }
+  constructor(private router: Router, private itemService: ItemService, private userService: UserService) { }
 
   ngOnInit() {
     this.getShoppingCarts();
   }
 
   async getShoppingCarts() {
+    if (!this.userService.authorize()){
+      this.router.navigate(['/login']);
+      return ;
+    }
     const promise = new Promise((resolve, reject) => {
       this.itemService.getShoppingCarts()
         .toPromise()
@@ -74,18 +80,22 @@ export class CartComponent implements OnInit {
   }
 
   async update(shoppingCart: ShoppingCart) {
+    if (!this.userService.authorize()){
+      this.router.navigate(['/login']);
+      return ;
+    }
     const promise = new Promise((resolve, reject) => {
       this.itemService.updateCart(shoppingCart)
         .toPromise()
         .then(
           res => { // Success 
-            if (!res)
-              alert("Please Login First");
-            else if (!isString(res)) {
+            if (!isString(res)) {
               console.log(res);
+              alert("Out of Stock");
             }
             else {
               localStorage.setItem('token', res.toString());
+              localStorage.setItem('exp', (new Date().valueOf() + 60 * 60 * 1000).toString());
             }
             resolve();
           },

@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ShoppingCart } from '../shared/models/shoppingcart';
 import { isString } from 'util';
 import { Subscription } from 'rxjs';
+import { UserService } from '../shared/services/user.service';
 
 @Component({
   selector: 'app-category',
@@ -19,7 +20,7 @@ export class CategoryComponent implements OnInit {
   private errorMessage: string;
   private shoppingCart: ShoppingCart;
 
-  constructor(private route: ActivatedRoute, private itemService: ItemService) {
+  constructor(private route: ActivatedRoute, private itemService: ItemService, private userService: UserService) {
     this.route.paramMap.subscribe(params => {
       this.type = this.route.snapshot.paramMap.get('type');
       this.ngOnInit();
@@ -54,9 +55,7 @@ export class CategoryComponent implements OnInit {
 
   async addCart(itemId: number) {
     this.shoppingCart.itemId = itemId;
-    console.log(!localStorage.getItem('token'));
-    if (!localStorage.getItem('token')){
-
+    if (!this.userService.authorize()){
       alert("Please Login First");
       return ;
     }
@@ -71,6 +70,7 @@ export class CategoryComponent implements OnInit {
             }
             else {
               localStorage.setItem('token', res.toString());
+              localStorage.setItem('exp', (new Date().valueOf() + 60 * 60 * 1000).toString());
               alert("Add Success");
             }
             resolve();

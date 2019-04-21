@@ -6,6 +6,7 @@ import { Item } from '../shared/models/item';
 import { ShoppingCart } from '../shared/models/shoppingcart';
 import { isString, isNumber } from 'util';
 import { delay } from 'q';
+import { UserService } from '../shared/services/user.service';
 
 @Component({
   selector: 'app-item',
@@ -24,7 +25,8 @@ export class ItemComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private itemService: ItemService) {
+    private itemService: ItemService, 
+    private userService: UserService) {
   }
 
   async ngOnInit() {
@@ -59,7 +61,7 @@ export class ItemComponent implements OnInit {
   }
 
   async addCart() {
-    if (!localStorage.getItem('token')){
+    if (!this.userService.authorize()){
       alert("Please Login First");
       return ;
     }
@@ -74,6 +76,7 @@ export class ItemComponent implements OnInit {
             }
             else {
               localStorage.setItem('token', res.toString());
+              localStorage.setItem('exp', (new Date().valueOf() + 60 * 60 * 1000).toString());
               alert("Add Success");
             }
             resolve();

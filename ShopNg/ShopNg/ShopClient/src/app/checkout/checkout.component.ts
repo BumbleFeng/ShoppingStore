@@ -46,7 +46,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   async placeOrder() {
-    if (!localStorage.getItem('token')){
+    if (!this.userService.authorize()){
       this.router.navigate(['/login']);
       return ;
     }
@@ -65,6 +65,7 @@ export class CheckoutComponent implements OnInit {
                 this.total += cart.number * cart.item.price;
               });
               localStorage.setItem('token', this.user.password);
+              localStorage.setItem('exp', (new Date().valueOf() + 60 * 60 * 1000).toString());
             }
             resolve();
           },
@@ -79,7 +80,7 @@ export class CheckoutComponent implements OnInit {
 
   async getCode($event: string) {
     console.log($event);
-    if (!localStorage.getItem('token')){
+    if (!this.userService.authorize()){
       this.router.navigate(['/login']);
       return ;
     }
@@ -105,7 +106,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   async checkout() {
-    if (!localStorage.getItem('token')){
+    if (!this.userService.authorize()){
       this.router.navigate(['/login']);
       return ;
     }

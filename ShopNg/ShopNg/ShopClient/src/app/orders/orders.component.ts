@@ -20,7 +20,7 @@ export class OrdersComponent implements OnInit {
   }
 
   async getOrders() {
-    if (!localStorage.getItem('token')){
+    if (!this.userService.authorize()){
       this.router.navigate(['/login']);
       return ;
     }

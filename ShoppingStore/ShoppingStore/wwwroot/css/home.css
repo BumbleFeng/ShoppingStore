@@ -884,103 +884,6 @@ nav .nav-down li img{
   background:#da4f4f;
 }
 
-/*comment*/
-#wetakle{
-  margin-top: 80px;
-  background: #f4f0ea;
-  padding: 60px 0;
-  overflow: hidden;
-  height:540px;
-  min-width: 1090px;
-}
-
-#wetakle .show{
-  position: relative;
-}
-
-.show-box{
-  width: 1090px;
-  height: 493px;
-  overflow: hidden;
-  position: relative;
-}
-
-.show-box ul{
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.show-box ul li{
-  float: left;
-  width: 357px;
-  height: 493px;
-  background: #fff;
-  margin-right: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.show-box ul li img{
-  width: 355px;
-  height: 355px;
-  background: #fff;
-  display: block;
-  margin: 0 auto;
-  overflow: hidden;
-  transition:all .8s;
-}
-
-.show-box ul li:hover img{
-  transform:scale(1.1,1.1);
-}
-
-.show-box ul li .show-bottom{
-  position: absolute;
-  left: 5px;
-  bottom: 0;
-  padding: 20px 15px;
-  background: #fff;
-  width: 315px;
-}
-
-.show-bottom .name{
-  color: #999;
-  margin-bottom: 12px;
-  font-size: 13px;
-}
-
-.show-bottom .name .frontname{
-  padding-right: 10px;
-}
-
-.show-bottom .paname{
-  color: #333;
-  font-size: 16px;
-  height: 16px;
-  line-height: 14px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.show-bottom .paname span{
-  display:inline-block;
-  float: left;
-}
-.show-bottom .paname .price{
-  float: right;
-  padding-right: 15px;
-  color: #b4a078;
-  font-size: 13px;
-  font-weight: normal;
-}
-
-.show-bottom .comment{
-  font-size: 13px;
-  color: #333;
-  line-height: 20px;
-  min-height: 80px;
-}
 /*footer*/
 footer{
   padding-top: 60px;
@@ -1186,4 +1089,81 @@ footer{
 
 .footer-bottom .copy p{
   margin-top: 5px;
+}
+
+/*shutter*/
+.slider-outer {
+    width: 1090px;
+    height: 310px;
+    position: relative;
+    margin-bottom: 50px;
+    min-width: 1090px;
+}
+
+.img-item {
+    position: absolute;
+    width: 218px;
+    height: 100%;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+    /*设置子元素在3D空间中呈现*/
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+    /*让图片可以构成一个有四个面的长方体 start*/
+    .img-item .img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-size: cover;
+    }
+
+        .img-item .img:nth-child(1) {
+            background: url(../img/28.jpg) no-repeat;
+            -webkit-transform: rotateX(0deg) translateZ(150px);
+            transform: rotateX(0deg) translateZ(150px);
+        }
+
+        .img-item .img:nth-child(2) {
+            background: url(../img/27.jpg) no-repeat;
+            -webkit-transform: rotateX(-90deg) translateZ(150px);
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        .img-item .img:nth-child(3) {
+            background: url(../img/29.jpg) no-repeat;
+            -webkit-transform: rotateX(-180deg) translateZ(150px);
+            transform: rotateX(-180deg) translateZ(150px);
+        }
+
+        .img-item .img:nth-child(4) {
+            background: url(../img/30.jpg) no-repeat;
+            -webkit-transform: rotateX(-270deg) translateZ(150px);
+            transform: rotateX(-270deg) translateZ(150px);
+        }
+
+        .img-item .img:nth-child(5) {
+            background: url(../img/26.jpg) no-repeat;
+            -webkit-transform: rotateX(-360deg) translateZ(150px);
+            transform: rotateX(-360deg) translateZ(150px);
+        }
+
+/*让图片可以构成一个有四个面的长方体 end*/
+.btns .prev1:hover {
+    background: #B19E7A url(../img/2.png) no-repeat 0 -5436px;
+}
+
+.btns .next1:hover {
+    background: #B19E7A url(../img/2.png) no-repeat 0 -5566px;
+}
+
+.btns .prev1 {
+    left: -60px;
+    background-position: 0 -5436px;
+}
+
+.btns .next1 {
+    right: -60px;
+    background-position: 0 -5566px;
 }

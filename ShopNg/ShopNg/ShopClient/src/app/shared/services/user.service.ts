@@ -23,6 +23,15 @@ export class UserService {
     this.subject.next();
   }
 
+  authorize(): boolean{
+    if(!localStorage.getItem('token') || !localStorage.getItem('exp') ||new Date().valueOf() > parseInt(localStorage.getItem('exp'))){
+      localStorage.clear();
+      this.clearUsername();
+      return false;
+    }
+    return true;
+  }
+
   getUsername(): Observable<any> {
     return this.subject.asObservable();
   }

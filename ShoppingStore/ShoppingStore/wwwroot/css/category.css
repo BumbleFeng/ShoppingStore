@@ -39,6 +39,7 @@
 
     .category-list img {
         max-width: 223px;
+        max-height: 170px;
         transition: all .6s;
     }
 

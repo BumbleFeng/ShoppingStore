@@ -8,5 +8,5 @@ ShopNg:
 This is an Angular project rewrited based on ShoppingStre. Set the API url in ShopClient/src/app/app.constants.ts. Run ngbuild.sh to build and get the dist.zip. Use packer to build AWS AMI of Ubuntu and deploy the website with nginx. Use Terraform to run the VM. It is deployed on Azure as an [App Service](https://shoppingstoreng.azurewebsites.net), on Github as [GitHub pages](https://bumblefeng.github.io/ShoppingStore/home).  
 
 
-App Service is a Paas Server form Azure. For the free plan, the first connection may take a while to get response, then it will work normally.
+App Service is a Paas Server form Azure. For the free plan, the first connection may take a while to get response, then it will work normally. Browse https://shoppingstoreapi.azurewebsites.net/api/item to warm up the api server before browse the website.
 

@@ -687,3 +687,102 @@
 	color: #333;
 	margin-top: 15px;
 }
+
+/*comment*/
+#wetakle {
+    margin-top: 80px;
+    background: #f4f0ea;
+    padding: 60px 0;
+    overflow: hidden;
+    height: 540px;
+    min-width: 1090px;
+}
+
+    #wetakle .show {
+        position: relative;
+    }
+
+.show-box {
+    width: 1090px;
+    height: 493px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .show-box ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+        .show-box ul li {
+            float: left;
+            width: 357px;
+            height: 493px;
+            background: #fff;
+            margin-right: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .show-box ul li img {
+                width: 355px;
+                height: 355px;
+                background: #fff;
+                display: block;
+                margin: 0 auto;
+                overflow: hidden;
+                transition: all .8s;
+            }
+
+            .show-box ul li:hover img {
+                transform: scale(1.1,1.1);
+            }
+
+            .show-box ul li .show-bottom {
+                position: absolute;
+                left: 5px;
+                bottom: 0;
+                padding: 20px 15px;
+                background: #fff;
+                width: 315px;
+            }
+
+.show-bottom .name {
+    color: #999;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+    .show-bottom .name .frontname {
+        padding-right: 10px;
+    }
+
+.show-bottom .paname {
+    color: #333;
+    font-size: 16px;
+    height: 16px;
+    line-height: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+    .show-bottom .paname span {
+        display: inline-block;
+        float: left;
+    }
+
+    .show-bottom .paname .price {
+        float: right;
+        padding-right: 15px;
+        color: #b4a078;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+.show-bottom .comment {
+    font-size: 13px;
+    color: #333;
+    line-height: 20px;
+    min-height: 80px;
+}

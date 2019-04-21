@@ -24,8 +24,9 @@ export class LoginComponent implements OnInit {
         if (isString(token)) {
           localStorage.setItem('token', token.toString());
           localStorage.setItem('username', this.user.username);
+          localStorage.setItem('exp', (new Date().valueOf() + 60 * 60 * 1000).toString());
           this.router.navigate(['/home']);
-        }else{
+        } else {
           this.user = new User();
         }
       });

@@ -105,53 +105,41 @@ function lasttime(){
 lasttime();
 setInterval(lasttime,1000);
 
-// comment
+// shutter
+function kaleidoscope() {
+    var num = 0;
+    $("#j_silder_outer .img-item").each(function (index, el) {
+      $(this).css({
+        "left": $(this).width() * index + "px",
+        /*让每个img-item延时一定时间执行动画*/
+        "transitionDelay": index * 0.3 + "s"
+      });
+      $(this).find(".img").css({
+        "backgroundPosition": -$(this).width() * index + "px"
+      });;
+    });
 
-function talk(){
-	
-	var con=$(".show-box ul li:lt(3)").clone();
-	var $ul=$(".show-box ul");
-	$ul.append(con);
-	var $li=$(".show-box ul li");
-	var length=$li.length;
-    $ul.css("width",367*length+"px");
-    var n=0;
-    $(".show .next").click(function(){
-    	n++;
-        if (n>length-3) {
-        	n=1;
-        	$ul.css("left",0)
-        };
-    	$ul.stop().animate({"left":-n*367+"px"},600)
-    })
-    $(".show .prev").click(function(){
-    	n--;
-        if (n<0) {
-        	n=length-4;
-        	$ul.css("left",-(length-3)*367+"px")
-        };
-    	$ul.stop().animate({"left":-n*367+"px"},600)
-    })
+    $(".btns .prev1").on("click", function () {
+      $("#j_silder_outer .img-item").css("transform", "rotateX(" + (++num * 90) + "deg)");
+    });
 
-    var timer;
-    function play(){
-    	timer=setTimeout(function(){
-    		play();
-    		$(".show .next").click();
-    	},2000)
+    $(".btns .next1").on("click", function () {
+      $("#j_silder_outer .img-item").css("transform", "rotateX(" + (--num * 90) + "deg)");
+    });
+
+    var timejg = 4000;//轮播间隔时间
+    var time = setInterval(move, timejg);
+    function move() {
+      $("#j_silder_outer .img-item").css("transform", "rotateX(" + (--num * 90) + "deg)");
     }
-
-    play();
-
-    $(".show").hover(function(){
-    	clearInterval(timer);
-    },function(){
-    	play();
-    })
-
+    $('.slider-outer').hover(function () {
+      clearInterval(time);
+    }, function () {
+      time = setInterval(move, timejg);
+    });
 }
 
-talk();
+kaleidoscope();
 
 (function(){
    AOS.init({

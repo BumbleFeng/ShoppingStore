@@ -29,7 +29,7 @@ export class OrderDetailComponent implements OnInit {
   }
 
   async getOrder() {
-    if (!localStorage.getItem('token')){
+    if (!this.userService.authorize()){
       this.router.navigate(['/login']);
       return ;
     }
@@ -43,6 +43,7 @@ export class OrderDetailComponent implements OnInit {
               var date = new Date(this.order.placedTime);
               this.order.placedTime = new Date(date.getTime() - (date.getTimezoneOffset() * 60000));
               localStorage.setItem('token', this.order.user.password);
+              localStorage.setItem('exp', (new Date().valueOf() + 60 * 60 * 1000).toString());
               this.discount = 0;
               this.order.orderItems.forEach(item => this.discount += item.number * item.item.price);
               this.discount = this.order.total - this.discount;
