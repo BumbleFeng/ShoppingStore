@@ -37,7 +37,7 @@ resource "aws_security_group" "tenable" {
 }
 
 resource "aws_instance" "vault-example" {
-  ami           = "ami-094db6c7c4c402a2e"
+  ami           = "ami-0778bfbbec867e99f"
   instance_type = "t2.micro"
   security_groups = ["${aws_security_group.tenable.name}"]
   key_name = "ec2"
