@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
       .subscribe(token => {
         if (isString(token)) {
           localStorage.setItem('token', token.toString());
+          localStorage.setItem('username', this.user.username);
           this.router.navigate(['/home']);
         }else{
           this.user = new User();

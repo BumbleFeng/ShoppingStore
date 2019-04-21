@@ -31,6 +31,8 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(localStorage.getItem('username'))
+      this.username = localStorage.getItem('username');
     this.scrolldown("header ul .app", ".ma");
     this.scrolldown(".tab-nav>li", ".nav-down")
   }
