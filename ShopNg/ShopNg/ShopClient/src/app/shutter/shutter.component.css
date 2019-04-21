@@ -28,42 +28,42 @@
 }
 
 .img-item .img:nth-child(1) {
-  background: url(../../assets/img/28.jpg) no-repeat;
+  background: url(assets/img/28.jpg) no-repeat;
   -webkit-transform: rotateX(0deg) translateZ(150px);
           transform: rotateX(0deg) translateZ(150px);
 }
 
 .img-item .img:nth-child(2) {
-  background: url(../../assets/img/27.jpg) no-repeat;
+  background: url(assets/img/27.jpg) no-repeat;
   -webkit-transform: rotateX(-90deg) translateZ(150px);
           transform: rotateX(-90deg) translateZ(150px);
 }
 
 .img-item .img:nth-child(3) {
-  background: url(../../assets/img/29.jpg) no-repeat;
+  background: url(assets/img/29.jpg) no-repeat;
   -webkit-transform: rotateX(-180deg) translateZ(150px);
           transform: rotateX(-180deg) translateZ(150px);
 }
 
 .img-item .img:nth-child(4) {
-  background: url(../../assets/img/30.jpg) no-repeat;
+  background: url(assets/img/30.jpg) no-repeat;
   -webkit-transform: rotateX(-270deg) translateZ(150px);
           transform: rotateX(-270deg) translateZ(150px);
 }
 
 .img-item .img:nth-child(5) {
-  background: url(../../assets/img/26.jpg) no-repeat;
+  background: url(assets/img/26.jpg) no-repeat;
   -webkit-transform: rotateX(-360deg) translateZ(150px);
           transform: rotateX(-360deg) translateZ(150px);
 }
 
 /*让图片可以构成一个有四个面的长方体 end*/
 .btns .prev1:hover {
-  background: #B19E7A url(../../assets/img/2.png) no-repeat 0 -5436px;
+  background: #B19E7A url(assets/img/2.png) no-repeat 0 -5436px;
 }
 
 .btns .next1:hover {
-  background: #B19E7A url(../../assets/img/2.png) no-repeat 0 -5566px;
+  background: #B19E7A url(assets/img/2.png) no-repeat 0 -5566px;
 }
 
 .btns .prev1 {

@@ -29,7 +29,7 @@
 
           <tr *ngFor="let cart of shoppingCarts">
             <th>
-              <img src="../../assets/img/{{cart.item.image}}" class="item-img">
+              <img src="assets/img/{{cart.item.image}}" class="item-img">
             </th>
             <td> <a routerLink="/item/{{cart.item.itemId}}">{{cart.item.name}}</a></td>
             <td>{{cart.item.price|currency}}</td>
